@@ -1,0 +1,254 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: linear-gradient(to right, #000, #ff6600);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 102, 0, 0.4);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ff6600;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  background-color: #222;
+  border-radius: 30px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 8px 10px;
+  width: 220px;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+  color: #ccc;
+}
+
+.search-bar button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #e65c00;
+}
+
+  
+  /* Hero Section */
+  .contact-hero {
+    background: url('https://images.unsplash.com/photo-1581090700227-1e8e03b88503?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  .contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Contact Details Section */
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 10%;
+    color: white;
+  }
+  .contact-info h2,
+  .contact-form h2 {
+    color: orange;
+    margin-bottom: 20px;
+  }
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  .contact-info a {
+    color: white;
+    transition: color 0.3s;
+  }
+  .contact-info a:hover {
+    color: orange;
+  }
+  .map-buttons {
+    margin-top: 20px;
+  }
+  .btn-map {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: white;
+    background: #555;
+    transition: background 0.3s;
+  }
+  .btn-map:hover {
+    background: orange;
+  }
+  
+  /* Form Styles */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .contact-form button {
+    padding: 12px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .contact-form button:hover {
+    background: #ff7f00;
+  }
+  
+  /* Map Section */
+  .map-section {
+    margin: 40px 0;
+    padding: 0 10%;
+  }
+  
+  /* Social Media */
+  .social-media {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111;
+    color: white;
+  }
+  .social-media h2 {
+    color: orange;
+    margin-bottom: 20px;
+  }
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: orange;
+  }
+  
+  /* Footer */
+  .main-footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

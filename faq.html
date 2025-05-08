@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find answers to frequently asked questions about our truck wheels, agricultural rims, and services at CHENHUA AUTO." />
+  <title>FAQ | CHENHUA AUTO</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-question {
+      cursor: pointer;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      margin: 5px 0;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      background-color: #f4f4f4;
+      border-left: 3px solid #0077cc;
+    }
+    .faq-question:hover {
+      background-color: #e0e0e0;
+    }
+    .search-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .search-container input[type="text"] {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .search-results {
+      margin-top: 20px;
+      list-style-type: none;
+    }
+    .search-results li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Frequently Asked Questions</h1>
+      <p>Here are some of the most common questions we receive. If you can't find the answer you're looking for, please feel free to <a href="contact.html">contact us</a>.</p>
+    </section>
+
+    <!-- FAQ Search -->
+    <section class="search-container">
+      <input type="text" id="faq-search" placeholder="Search FAQs..." onkeyup="searchFAQ()">
+      <ul id="search-results" class="search-results"></ul>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer('answer1')">What types of truck tires do you offer?</div>
+        <div id="answer1" class="faq-answer">
+          <p>We offer a wide range of truck tires, including heavy-duty, all-terrain, and long-haul tires from the Ohnice and Durun brands. Each tire is designed to provide superior performance, durability, and safety.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer('answer2')">How can I place an order for agricultural rims?</div>
+        <div id="answer2" class="faq-answer">
+          <p>You can place an order for agricultural rims by contacting us directly through our <a href="contact.html">contact page</a> or by requesting a custom quote. We offer bulk order options as well.</p>
+        </div>
+      </div>
+
+      <!-- More FAQ items -->
+    </section>
+
+    <section>
+      <h2>Still Have Questions?</h2>
+      <p>If you have any further questions, feel free to reach out to us. Visit our <a href="contact.html">Contact Page</a> or request a custom quote for personalized assistance.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CHENHUA AUTO. All rights reserved.</p>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </footer>
+
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      if (answer.style.display === "none" || answer.style.display === "") {
+        answer.style.display = "block";
+      } else {
+        answer.style.display = "none";
+      }
+    }
+
+    function searchFAQ() {
+      const searchInput = document.getElementById("faq-search").value.toLowerCase();
+      const searchResults = document.getElementById("search-results");
+      const faqItems = document.querySelectorAll(".faq-item");
+      
+      searchResults.innerHTML = "";
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question").textContent.toLowerCase();
+        
+        if (question.includes(searchInput)) {
+          const resultItem = document.createElement("li");
+          resultItem.innerHTML = item.querySelector(".faq-question").outerHTML;
+          searchResults.appendChild(resultItem);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags for SEO & Mobile Responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="CHENHUA AUTO - Premium Agricultural Rims for modern farming and machinery solutions.">
+  <meta name="keywords" content="agricultural rims, farm wheels, tractor rims, durable rims, CHENHUA AUTO">
+  <meta name="author" content="CHENHUA AUTO">
+  <title>CHENHUA AUTO | Agricultural Rims</title>
+
+  <!-- Open Graph / Social Share -->
+  <meta property="og:title" content="CHENHUA AUTO - Premium Agricultural Rims">
+  <meta property="og:description" content="Shop quality tractor & machinery rims. Trusted by professionals.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:url" content="https://www.chenhuaauto.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/agric 3.jpg">
+
+  <!-- Google Fonts + FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">CHENHUA AUTO</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html">Tractor Rims</a></li>
+            <li><a href="products.html">Combine Harvester Rims</a></li>
+            <li><a href="products.html">Custom Rims</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Company <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search agricultural rims..." />
+        <button type="submit">Search</button>
+      </div>
+      <div class="search-box">
+    </nav>
+  </header>
+
+
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>Explore Our Durable Rims</h1>
+      <p>Premium truck and agricultural rims built to last</p>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="product-search-section">
+    <h2>Find Your Perfect Rim</h2>
+    <div class="product-size-selection">
+      <label for="product-size">Select Size:</label>
+      <select id="product-size" name="product-size">
+        <option value="W8x36">W8x36-inch</option>
+        <option value="W8x46">W8x46-inch</option>
+        <option value="9x18">9x18-inch</option>
+        <option value="W9x18">W9x18-inch</option>
+        <option value="W10x36">W10x36-inch</option>
+        <option value="W12x46">W12x18-inch</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="product-section">
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric a.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+        <p class="product-price">$299.99</p>
+      </a>
+      
+      <!-- Quantity Selector -->
+      <div class="quantity-section">
+        <label for="quantity" class="quantity-label">Quantity: </label>
+        <input type="number" id="quantity" class="quantity-input" min="1" value="1" />
+      </div>
+
+      <form id="checkout-form" action="purchase_complete.html" method="POST">
+    <!-- form fields for shipping, payment, etc. -->
+    <button type="submit" id="buy-now" class="btn">Buy Now</button>
+</form>
+on>
+    </div>
+    </div>
+
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric b.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+
+      <!-- Size Filter Dropdown -->
+      <div class="size-filter">
+        <label for="size-select">Choose Size:</label>
+        <select id="size-select">
+          <option value="all">--Choose Size--</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+
+      <!-- Quantity Modal -->
+      <div id="overlay" class="overlay"></div>
+      <div id="quantity-modal" class="modal">
+        <h3>Select Quantity</h3>
+        <input type="number" id="quantity" min="1" value="1" />
+        <button id="submit-quantity">Submit</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric c.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric f.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <!-- <div class="product-card">
+      <div class="product-image-container">
+        <img src="W10×36农业黄/agric g.jpg" alt="Rim W10x36-inch" class="product-image">
+        <div class="image-overlay">
+          <span class="product-rating">★★★★☆</span>
+          <span class="product-size">Size: W10x36-inch</span>
+        </div>
+      </div>
+      <h3 class="product-title">Duramax Wheel</h3>
+      <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+    </div> -->
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric h.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric i.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric j.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 10.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 11.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 2.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 3.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 4.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 5.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 6.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 7.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 8.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 9.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Agricultural Rim - Large</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =2.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =10.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =3.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =4.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+
+    <!-- <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =5.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div> -->
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =6.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =7.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =8.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <!-- <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×36农业黄/agric  =9.jpg" alt="Rim W8x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div> -->
+
+    <!-- next image 3 -->
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-8.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-11.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-2.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-3.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-4.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-5.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-6.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-7.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-1.jpg" alt="Rim W8x48-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W8x48-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <!-- <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W8×48农业黄/agric-9.jpg" alt="Rim W12x46-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W12x46-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div> -->
+
+    <!-- fouth  last  image  -->
+
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 10.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 11.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 2.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 3.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 4.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 5.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 6.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 7.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 8.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W9×18农业黄/agric 9.jpg" alt="Rim W9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <!-- last image done -->
+
+
+    <!-- <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W10×36农业黄/agric h.jpg" alt="Rim W10x36-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: W10x36-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div> -->
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  K.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  B.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  C.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  D.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  E.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  F.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  G.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  H.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">FieldMaster Pro</h3>
+        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
+      </a>
+    </div>
+    <!-- 
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="C9×18哈克黄/agric  I.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">Duramax Wheel</h3>
+        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 7.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★★</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">StrongField Rim</h3>
+        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a class="link" href="faq.html">
+        <div class="product-image-container">
+          <img src="W12×46农业黄/AGRIC 8.jpg" alt="Rim 9x18-inch" class="product-image">
+          <div class="image-overlay">
+            <span class="product-rating">★★★★☆</span>
+            <span class="product-size">Size: 9x18-inch</span>
+          </div>
+        </div>
+        <h3 class="product-title">TitanForce Rim</h3>
+        <p class="product-brief">Built to last under pressure and load.</p>
+      </a>
+    </div> -->
+  </section>
+
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <h3>What Our Customers Say</h3>
+    <div class="testimonial">
+      <p>"Great quality rims! Highly recommend this product for anyone in the industry." - John Doe</p>
+    </div>
+    <div class="testimonial">
+      <p>"Excellent service and fast delivery. Very happy with the purchase!" - Jane Smith</p>
+    </div>
+    <div class="testimonial">
+      <p>"The durability of the product is impressive. It's been a great addition to our fleet." - Mike Brown</p>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <h4>Q: What sizes do you offer?</h4>
+      <p>A: We offer a wide range of sizes, including W8x36", W8x36", and W8x36" rims.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Q: How do I place an order?</h4>
+      <p>A: Select your desired size, view the rim details, and go to the quote page to order.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Q: Do you offer bulk pricing?</h4>
+      <p>A: Yes, we offer discounts for bulk purchases. Contact us directly for a custom quote.</p>
+    </div>
+  </div>
+
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">CHENHUA AUTO</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#testimonial">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> CHENHUA AUTO. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js" defer></script>
+  <script src="products.js" defer></script>
+
+</body>
+
+</html>
