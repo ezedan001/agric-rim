@@ -70,7 +70,7 @@
     <div class="container">
       <!-- Logo -->
       <a href="" class="logo">
-        <img src="images/logo.png" alt="CHENHUA AUTO" width="50">
+        <img src="images/cen 2.jpg" alt="CHENHUA AUTO" width="50">
       </a>
 
       <!-- Navigation -->
@@ -85,15 +85,25 @@
       </nav>
 
       <!-- Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search products...">
-        <button><i class="fas fa-search"></i></button>
-      </div>
+<div class="search-bar">
+  <input type="text" placeholder="Search products...">
+  <button><i class="fas fa-search"></i></button>
+</div>
 
-      <!-- CTA Button -->
-      <div class="cta">
-        <a href="/request-quote" class="cta-btn">Request a Quote</a>
-      </div>
+<!-- Cart Icon -->
+<div class="cart-icon" onclick="openCartModal()">
+  🛒 <span id="cart-count"><div class="coupon-area">
+  <input type="text" id="couponInput" placeholder="Enter coupon code">
+  <button onclick="applyCoupon()">Apply</button>
+  <p id="couponMessage"></p>
+</div>
+</span>
+</div>
+
+<!-- CTA Button -->
+<div class="cta">
+  <a href="/request-quote" class="cta-btn">Request a Quote</a>
+</div>
 
       <!-- Mobile Menu Icon -->
       <div class="mobile-menu">
@@ -113,92 +123,134 @@
       });
     </script>
 
+    <script>
+  function openCartModal() {
+    document.getElementById("cartModal").style.display = "block";
+  }
+
+  // Optional: Close cart modal when clicking outside or on close icon
+  document.querySelector(".close-cart").onclick = () => {
+    document.getElementById("cartModal").style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("cartModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<script>
+  function updateCartCount(count) {
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  // Example: simulate 3 items in cart
+  updateCartCount(3);
+</script>
+
+
+
 
   </header>
 
 
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-  <!-- HELLO SECTION -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="movie/agric.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+    <source src="movie/agric.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    <div class="hero-content">
-      <h1>Strong Rims. Strong Harvest.</h1>
-      <p>Discover premium agricultural rims that power your productivity.</p>
-      <a href="/products" class="hero-btn">Explore Products</a>
+  <div class="hero-content">
+    <h1>Strong Rims. Strong Harvest.</h1>
+    <p>Discover premium agricultural rims that power your productivity.</p>
+    <a href="/products" class="hero-btn">Explore Products</a>
+  </div>
+
+  <div class="scroll-down">
+    <span></span>
+    <p>Scroll</p>
+  </div>
+</section>
+
+
+
+<!-- PRODUCT GALLERY -->
+<section class="product-gallery">
+  <h2>Best Sellers</h2>
+  <div class="product-container">
+    <div class="product-card" data-title="Product 1" data-price="29.99" data-image="images/agric 4.jpg">
+      <img src="images/agric 4.jpg" alt="Product 1" class="product-image">
+      <div class="product-title">Product 1</div>
+      <div class="product-price">$29.99</div>
+      <div class="rating">★★★★☆</div>
+      <button class="quick-view-btn">Quick View</button>
     </div>
 
-    <div class="scroll-down">
-      <span></span>
-      <p>Scroll</p>
+    <div class="product-card" data-title="Product 2" data-price="49.99" data-image="images/agric 1.jpg">
+      <img src="images/agric 1.jpg" alt="Product 2" class="product-image">
+      <div class="product-title">Product 2</div>
+      <div class="product-price">$49.99</div>
+      <div class="rating">★★★☆☆</div>
+      <button class="quick-view-btn">Quick View</button>
     </div>
-  </section>
 
-
-  <!-- PRODUCT GALLERY -->
-  <section class="product-gallery">
-    <h2>Best Sellers</h2>
-    <div class="product-container">
-      <div class="product-card">
-        <img src="images/agric 4.jpg" alt="Product 1" class="product-image">
-        <div class="product-title">Product 1</div>
-        <div class="product-price">$29.99</div>
-        <div class="rating">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>☆</span>
-        </div>
-        <button class="quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card">
-        <img src="images/agric 1.jpg" alt="Product 2" class="product-image">
-        <div class="product-title">Product 2</div>
-        <div class="product-price">$49.99</div>
-        <div class="rating">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>☆</span>
-          <span>☆</span>
-        </div>
-        <button class="quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card">
-        <img src="images/agric 3.jpg" alt="Product 3" class="product-image">
-        <div class="product-title">Product 3</div>
-        <div class="product-price">$39.99</div>
-        <div class="rating">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>☆</span>
-        </div>
-        <button class="quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card">
-        <img src="images/agri 1.jpg" alt="Product 4" class="product-image">
-        <div class="product-title">Product 4</div>
-        <div class="product-price">$59.99</div>
-        <div class="rating">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-        </div>
-        <button class="quick-view-btn">Quick View</button>
-      </div>
+    <div class="product-card" data-title="Product 3" data-price="39.99" data-image="images/agric 3.jpg">
+      <img src="images/agric 3.jpg" alt="Product 3" class="product-image">
+      <div class="product-title">Product 3</div>
+      <div class="product-price">$39.99</div>
+      <div class="rating">★★★★☆</div>
+      <button class="quick-view-btn">Quick View</button>
     </div>
-    <button class="view-all-btn">View All Products</button>
-  </section>
-  
+
+    <div class="product-card" data-title="Product 4" data-price="59.99" data-image="images/agri 1.jpg">
+      <img src="images/agri 1.jpg" alt="Product 4" class="product-image">
+      <div class="product-title">Product 4</div>
+      <div class="product-price">$59.99</div>
+      <div class="rating">★★★★★</div>
+      <button class="quick-view-btn">Quick View</button>
+    </div>
+  </div>
+  <button class="view-all-btn">View All Products</button>
+</section>
+
+<!-- QUICK VIEW MODAL -->
+<div id="quickViewModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Product Image">
+    <h3 id="modalTitle">Product Title</h3>
+    <p id="modalPrice">$0.00</p>
+    <label for="modalQuantity">Quantity:</label>
+    <input type="number" id="modalQuantity" value="1" min="1">
+    <p id="stockLimitMsg" style="color:red; display:none;">Max stock limit reached!</p>
+    <button id="addToCartBtn">Add to Cart</button>
+  </div>
+</div>
+
+<!-- CART MODAL -->
+<div id="cartModal" class="modal">
+  <div class="modal-content cart-box">
+    <span class="close-cart" onclick="closeCart()">&times;</span>
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: $0.00</p>
+    <a id="checkoutBtn" class="checkout-btn" target="_blank">Checkout via WhatsApp</a>
+    <button id="goToCheckout" class="checkout-button">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- CHECKOUT PAGE (hidden by default) -->
+<div id="checkoutPage" style="display:none; padding:20px;">
+  <h2>Order Confirmation</h2>
+  <div id="checkout-items"></div>
+  <p id="checkout-total">Total: $0.00</p>
+  <p>Thank you for your order! Our team will contact you shortly.</p>
+</div>
+
 
   
   <!-- Testimonials -->
@@ -249,12 +301,13 @@
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> CHENHUA AUTO. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a> |<a href="#">Terms of Service</a>
       </div>
     </div>
   </footer>
