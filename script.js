@@ -1,118 +1,215 @@
-// HERO SECTION
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileMenuBtn = document.getElementById('closeMobileMenu');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('active');
+  hamburgerBtn.setAttribute('aria-expanded', 'true');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('active');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+}
+
+// Event listeners
+hamburgerBtn.addEventListener('click', openMobileMenu);
+closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
+
+// Optional: close menu when clicking outside menu on mobile (not required, but user friendly)
+document.addEventListener('click', (e) => {
+  if (
+    mobileMenu.classList.contains('active') &&
+    !mobileMenu.contains(e.target) &&
+    !hamburgerBtn.contains(e.target)
+  ) {
+    closeMobileMenu();
+  }
+});
 
 
-  // Play and pause video on scroll
-  const heroVideo = document.querySelector('.hero-video');
-  let lastScrollY = 0;
-  const scrollThreshold = 100;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > scrollThreshold && !heroVideo.paused) {
-      heroVideo.pause();
-    } else if (window.scrollY <= scrollThreshold && heroVideo.paused) {
-      heroVideo.play();
-    }
-    lastScrollY = window.scrollY;
+// Elements
+const modeToggle = document.getElementById('modeToggle');
+const mobileModeToggle = document.getElementById('mobileModeToggle');
+
+// Apply saved theme on load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+});
+
+
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    modeToggle.textContent = '☀️'; // change icon to sun
+    if (mobileModeToggle) mobileModeToggle.textContent = '☀️ Light Mode';
+  } else {
+    localStorage.setItem('theme', 'light');
+    modeToggle.textContent = '🌙'; // moon icon
+    if (mobileModeToggle) mobileModeToggle.textContent = '🌙 Dark Mode';
+  }
+}
+
+// Event listeners
+if (modeToggle) modeToggle.addEventListener('click', toggleDarkMode);
+if (mobileModeToggle) mobileModeToggle.addEventListener('click', toggleDarkMode);
+
+
+
+
+
+
+
+
+// hero section
+
+  document.querySelector('.scroll-down').addEventListener('click',function(e) {
+    e.preventDefault();
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Scroll down smooth animation
-  const scrollDownButton = document.querySelector('.scroll-down');
-  scrollDownButton.addEventListener('click', () => {
-    window.scroll({
-      top: window.innerHeight, // Scroll to the hero section height
-      behavior: 'smooth'
-    });
-  });
 
 
+// product gallery
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const prevButton = document.querySelector('.carousel-btn.prev');
+const nextButton = document.querySelector('.carousel-btn.next');
+
+let currentIndex = 0;
+const slideWidth = slides[0].getBoundingClientRect().width + 20; // include margin-right
+
+// Move to slide
+function moveToSlide(index) {
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+  currentIndex = index;
+  checkButtons();
+}
+
+// Check if buttons should be disabled
+function checkButtons() {
+  if (currentIndex === 0) {
+    prevButton.disabled = true;
+    prevButton.style.opacity = 0.4;
+  } else {
+    prevButton.disabled = false;
+    prevButton.style.opacity = 0.9;
+  }
   
-  // Pause video on smaller devices to save battery
-  window.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('heroVideo');
-    if (window.innerWidth < 576) {
-      video.pause();
-    }
+  if (currentIndex >= slides.length - visibleSlides()) {
+    nextButton.disabled = true;
+    nextButton.style.opacity = 0.4;
+  } else {
+    nextButton.disabled = false;
+    nextButton.style.opacity = 0.9;
+  }
+}
+
+// Calculate visible slides based on viewport width
+function visibleSlides() {
+  const width = window.innerWidth;
+  if (width <= 480) return 1;
+  if (width <= 768) return 2;
+  return 3;
+}
+
+// Button Event Listeners
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    moveToSlide(currentIndex - 1);
+  }
+});
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex < slides.length - visibleSlides()) {
+    moveToSlide(currentIndex + 1);
+  }
+});
+
+// On window resize, reset position
+window.addEventListener('resize', () => {
+  moveToSlide(0);
+});
+
+// Initialize
+moveToSlide(0);
+
+const dotsContainer = document.querySelector('.carousel-dots');
+
+// Create dots dynamically
+slides.forEach((_, index) => {
+  const dot = document.createElement('button');
+  if(index === 0) dot.classList.add('active');
+  dotsContainer.appendChild(dot);
+
+  dot.addEventListener('click', () => {
+    moveToSlide(index);
   });
+});
 
+function updateDots(index) {
+  const dots = dotsContainer.querySelectorAll('button');
+  dots.forEach(dot => dot.classList.remove('active'));
+  if (dots[index]) dots[index].classList.add('active');
+}
 
-  // product Gallery
-  // 
-  const modal = document.getElementById("quickViewModal");
-  const cartModal = document.getElementById("cartModal");
-  const cartItems = document.getElementById("cart-items");
-  const cartTotal = document.getElementById("cart-total");
-  const checkoutBtn = document.getElementById("checkoutBtn");
-  const goToCheckout = document.getElementById("goToCheckout");
-  const checkoutPage = document.getElementById("checkoutPage");
-  const checkoutItems = document.getElementById("checkout-items");
-  const checkoutTotal = document.getElementById("checkout-total");
+// Update dots on slide move
+function moveToSlide(index) {
+  track.style.transform = `translateX(-${slideWidth * index}px)`;
+  currentIndex = index;
+  checkButtons();
+  updateDots(index);
+}
 
-  let cart = [];
+let startX = 0;
+let isDragging = false;
 
-  document.querySelectorAll(".quick-view-btn").forEach(button => {
-    button.onclick = (e) => {
-      const card = e.target.closest(".product-card");
-      document.getElementById("modalImage").src = card.dataset.image;
-      document.getElementById("modalTitle").textContent = card.dataset.title;
-      document.getElementById("modalPrice").textContent = "$" + card.dataset.price;
-      modal.style.display = "flex";
-    };
-  });
+track.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
 
-  document.getElementById("addToCartBtn").onclick = () => {
-    const title = document.getElementById("modalTitle").textContent;
-    const price = parseFloat(document.getElementById("modalPrice").textContent.slice(1));
-    const quantity = parseInt(document.getElementById("modalQuantity").value);
-    const image = document.getElementById("modalImage").src;
+track.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  let currentX = e.touches[0].clientX;
+  let diff = startX - currentX;
 
-    const existing = cart.find(item => item.title === title);
-    if (existing) {
-      existing.quantity += quantity;
-    } else {
-      cart.push({ title, price, quantity, image });
+  if (diff > 50) {  // swipe left
+    if (currentIndex < slides.length - visibleSlides()) {
+      moveToSlide(currentIndex + 1);
+      isDragging = false;
     }
-
-    updateCart();
-    modal.style.display = "none";
-  };
-
-  function updateCart() {
-    cartItems.innerHTML = "";
-    let total = 0;
-    cart.forEach(item => {
-      total += item.price * item.quantity;
-      cartItems.innerHTML += `
-        <div style="display:flex; gap:10px; margin-bottom:10px;">
-          <img src="${item.image}" style="width:50px;height:50px;object-fit:cover;border-radius:5px;">
-          <div>
-            <b>${item.title}</b><br>
-            Qty: ${item.quantity} | Price: $${(item.price * item.quantity).toFixed(2)}
-          </div>
-        </div>`;
-    });
-    cartTotal.textContent = "Total: $" + total.toFixed(2);
-    checkoutTotal.textContent = "Total: $" + total.toFixed(2);
-    checkoutItems.innerHTML = cartItems.innerHTML;
-
-    const msg = encodeURIComponent(cart.map(item => `${item.title} x${item.quantity} = $${(item.price * item.quantity).toFixed(2)}`).join('\n') + `\nTotal: $${total.toFixed(2)}`);
-    checkoutBtn.href = "https://wa.me/86180543655167?text=" + msg;
+  } else if (diff < -50) {  // swipe right
+    if (currentIndex > 0) {
+      moveToSlide(currentIndex - 1);
+      isDragging = false;
+    }
   }
+});
 
-  function closeModal() {
-    modal.style.display = "none";
-  }
-  function closeCart() {
-    cartModal.style.display = "none";
-  }
+track.addEventListener('touchend', () => {
+  isDragging = false;
+});
 
-  goToCheckout.onclick = () => {
-    document.querySelector(".product-gallery").style.display = "none";
-    cartModal.style.display = "none";
-    checkoutPage.style.display = "block";
-  };
 
-  // Optional: Close modal on outside click
-  window.onclick = function(event) {
-    if (event.target === modal) modal.style.display = "none";
-    if (event.target === cartModal) cartModal.style.display = "none";
-  };
+
+
+
+// <!-- your FAQ HTML content here -->
+
+
+
+
+
+
+
+

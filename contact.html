@@ -1,31 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CHENHUA INTERNATIONAL</title>
-  <link rel="stylesheet" href="contact.css" />
-  <!-- FontAwesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CHENHUA AUTO | Premium Agricultural & Truck Rims</title>
+  <meta name="description"
+    content="CHENHUA AUTO supplies high-performance agricultural and truck rims globally. Built for durability, quality, and global reliability.">
+  <meta name="keywords" content="agricultural rims, tractor rims, truck rims, heavy-duty wheels, chenhua auto">
+  <meta name="author" content="CHENHUA AUTO Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chenhuaauto.com/">
+
+  <!-- Open Graph / Facebook Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CHENHUA AUTO | Premium Rims for Agriculture & Transport">
+  <meta property="og:description" content="Durable, tested, and trusted agricultural and truck rims shipped worldwide.">
+  <meta property="og:image" content="https://www.chenhuaauto.com/images/og-image.jpg">
+  <meta property="og:url" content="https://www.chenhuaauto.com/">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CHENHUA AUTO">
+  <meta name="twitter:description" content="Rims you can trust for agriculture and trucking industries.">
+  <meta name="twitter:image" content="https://www.chenhuaauto.com/images/twitter-card.jpg">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Theme and PWA -->
+  <meta name="theme-color" content="#ff6600">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CHENHUA AUTO",
+    "url": "https://www.chenhuaauto.com",
+    "logo": "https://www.chenhuaauto.com/logo.png",
+    "description": "Global supplier of agricultural and truck rims",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-000-000-0000",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="contact.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
+
 <body>
 
-  <!-- Header -->
-  <header class="main-header">
-    <div class="logo">CHENHUA AUTO</div>
-    <nav class="main-nav">
+
+
+
+  <header class="container">
+
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Homepage">CHENHUA AUTO</a>
+
+    <!-- Main Navigation (Desktop) -->
+    <nav class="main-nav" aria-label="Primary Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="search-bar">
-      <input type="text" placeholder="Search..." />
-      <button type="button">Search</button>
-    </div>
+
+    <!-- Right Side Controls Desktop -->
+    <div class="header-controls">
+      <!-- Language Selector -->
+      <select aria-label="Select Language" class="language-select">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+
+      <!-- Search Bar Desktop -->
+      <div class="search-container desktop-search">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button aria-label="Search">🔍</button>
+      </div>
+
+      <!-- Cart Button Desktop -->
+      <button class="cart-btn" aria-label="View Cart">🛒</button>
+
+      <!-- Dark/Light Mode Toggle Desktop -->
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+
+      <!-- Hamburger for Mobile -->
+      <button class="hamburger-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileMenu">
+        &#9776;
+      </button>
+
   </header>
+
+  <!-- Mobile Menu Panel -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" role="menu">
+    <button id="closeMobileMenu" aria-label="Close Menu" class="close-btn">&times;</button>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#" role="menuitem">Home</a></li>
+      <li><a href="#" role="menuitem">Products</a></li>
+      <li><a href="#" role="menuitem">About</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+    </ul>
+
+    <select aria-label="Select Language" class="mobile-language-select">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <div class="mobile-search-container" role="search">
+      <input type="search" placeholder="Search..." aria-label="Search" />
+      <button aria-label="Search">🔍</button>
+    </div>
+
+    <button class="mobile-cart-btn" aria-label="View Cart">🛒 Cart</button>
+
+
+    <!-- Inside mobile menu -->
+    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌙 Toggle
+      Theme</button>
+
+
+    <script src="script.js"></script>
+  </nav>
 
   <!-- Hero Section -->
   <section class="contact-hero">
@@ -83,9 +203,54 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <p>&copy; 2025 CHENHUA INTERNATIONAL. All Rights Reserved.</p>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & About -->
+      <div class="footer-section footer-logo">
+        <img src="images/agric 3.jpg" alt="CHENHUA AUTO Logo" />
+
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <!-- <li><a href="#">FAQs</a></li> -->
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Dongying, China</li>
+          <li><i class="fas fa-phone-alt"></i> +86 546 6880070</li>
+          <li><i class="fas fa-envelope"></i> jinyueauto@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+          Service</a></p>
+    </div>
   </footer>
 
 </body>

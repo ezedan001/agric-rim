@@ -65,256 +65,366 @@
 
 </head>
 
+
 <body>
-  <header role="banner">
-    <div class="container">
-      <!-- Logo -->
-      <a href="" class="logo">
-        <img src="images/cen 2.jpg" alt="CHENHUA AUTO" width="50">
-      </a>
 
-      <!-- Navigation -->
-      <nav role="navigation" class="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </nav>
 
-      <!-- Search Bar -->
-<div class="search-bar">
-  <input type="text" placeholder="Search products...">
-  <button><i class="fas fa-search"></i></button>
-</div>
 
-<!-- Cart Icon -->
-<div class="cart-icon" onclick="openCartModal()">
-  🛒 <span id="cart-count"><div class="coupon-area">
-  <input type="text" id="couponInput" placeholder="Enter coupon code">
-  <button onclick="applyCoupon()">Apply</button>
-  <p id="couponMessage"></p>
-</div>
-</span>
-</div>
 
-<!-- CTA Button -->
-<div class="cta">
-  <a href="/request-quote" class="cta-btn">Request a Quote</a>
-</div>
+  <header class="container">
 
-      <!-- Mobile Menu Icon -->
-      <div class="mobile-menu">
-        <i class="fas fa-bars"></i>
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Homepage">CHENHUA AUTO</a>
+
+    <!-- Main Navigation (Desktop) -->
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Side Controls Desktop -->
+    <div class="header-controls">
+      <!-- Language Selector -->
+      <select aria-label="Select Language" class="language-select">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+
+      <!-- Search Bar Desktop -->
+      <div class="search-container desktop-search">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button aria-label="Search">🔍</button>
       </div>
-    </div>
 
-    <script>
-      const mobileMenuIcon = document.querySelector('.mobile-menu');
-      const nav = document.querySelector('.main-nav');
+      <!-- Cart Button Desktop -->
+      <button class="cart-btn" aria-label="View Cart">🛒</button>
 
-      mobileMenuIcon.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        const icon = mobileMenuIcon.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-      });
-    </script>
+      <!-- Dark/Light Mode Toggle Desktop -->
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
 
-    <script>
-  function openCartModal() {
-    document.getElementById("cartModal").style.display = "block";
-  }
-
-  // Optional: Close cart modal when clicking outside or on close icon
-  document.querySelector(".close-cart").onclick = () => {
-    document.getElementById("cartModal").style.display = "none";
-  };
-
-  window.onclick = function(event) {
-    const modal = document.getElementById("cartModal");
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
-<script>
-  function updateCartCount(count) {
-    document.getElementById('cart-count').textContent = count;
-  }
-
-  // Example: simulate 3 items in cart
-  updateCartCount(3);
-</script>
-
-
-
+      <!-- Hamburger for Mobile -->
+      <button class="hamburger-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileMenu">
+        &#9776;
+      </button>
 
   </header>
 
+  <!-- Mobile Menu Panel -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" role="menu">
+    <button id="closeMobileMenu" aria-label="Close Menu" class="close-btn">&times;</button>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-overlay"></div>
+    <ul class="mobile-nav-list">
+      <li><a href="#" role="menuitem">Home</a></li>
+      <li><a href="#" role="menuitem">Products</a></li>
+      <li><a href="#" role="menuitem">About</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+    </ul>
 
-  <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
-    <source src="movie/agric.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <select aria-label="Select Language" class="mobile-language-select">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="ar">Arabic</option>
+    </select>
 
-  <div class="hero-content">
-    <h1>Strong Rims. Strong Harvest.</h1>
-    <p>Discover premium agricultural rims that power your productivity.</p>
-    <a href="/products" class="hero-btn">Explore Products</a>
-  </div>
-
-  <div class="scroll-down">
-    <span></span>
-    <p>Scroll</p>
-  </div>
-</section>
-
-
-
-<!-- PRODUCT GALLERY -->
-<section class="product-gallery">
-  <h2>Best Sellers</h2>
-  <div class="product-container">
-    <div class="product-card" data-title="Product 1" data-price="29.99" data-image="images/agric 4.jpg">
-      <img src="images/agric 4.jpg" alt="Product 1" class="product-image">
-      <div class="product-title">Product 1</div>
-      <div class="product-price">$29.99</div>
-      <div class="rating">★★★★☆</div>
-      <button class="quick-view-btn">Quick View</button>
+    <div class="mobile-search-container" role="search">
+      <input type="search" placeholder="Search..." aria-label="Search" />
+      <button aria-label="Search">🔍</button>
     </div>
 
-    <div class="product-card" data-title="Product 2" data-price="49.99" data-image="images/agric 1.jpg">
-      <img src="images/agric 1.jpg" alt="Product 2" class="product-image">
-      <div class="product-title">Product 2</div>
-      <div class="product-price">$49.99</div>
-      <div class="rating">★★★☆☆</div>
-      <button class="quick-view-btn">Quick View</button>
-    </div>
-
-    <div class="product-card" data-title="Product 3" data-price="39.99" data-image="images/agric 3.jpg">
-      <img src="images/agric 3.jpg" alt="Product 3" class="product-image">
-      <div class="product-title">Product 3</div>
-      <div class="product-price">$39.99</div>
-      <div class="rating">★★★★☆</div>
-      <button class="quick-view-btn">Quick View</button>
-    </div>
-
-    <div class="product-card" data-title="Product 4" data-price="59.99" data-image="images/agri 1.jpg">
-      <img src="images/agri 1.jpg" alt="Product 4" class="product-image">
-      <div class="product-title">Product 4</div>
-      <div class="product-price">$59.99</div>
-      <div class="rating">★★★★★</div>
-      <button class="quick-view-btn">Quick View</button>
-    </div>
-  </div>
-  <button class="view-all-btn">View All Products</button>
-</section>
-
-<!-- QUICK VIEW MODAL -->
-<div id="quickViewModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="" alt="Product Image">
-    <h3 id="modalTitle">Product Title</h3>
-    <p id="modalPrice">$0.00</p>
-    <label for="modalQuantity">Quantity:</label>
-    <input type="number" id="modalQuantity" value="1" min="1">
-    <p id="stockLimitMsg" style="color:red; display:none;">Max stock limit reached!</p>
-    <button id="addToCartBtn">Add to Cart</button>
-  </div>
-</div>
-
-<!-- CART MODAL -->
-<div id="cartModal" class="modal">
-  <div class="modal-content cart-box">
-    <span class="close-cart" onclick="closeCart()">&times;</span>
-    <h3>Your Cart</h3>
-    <div id="cart-items"></div>
-    <p id="cart-total">Total: $0.00</p>
-    <a id="checkoutBtn" class="checkout-btn" target="_blank">Checkout via WhatsApp</a>
-    <button id="goToCheckout" class="checkout-button">Proceed to Checkout</button>
-  </div>
-</div>
-
-<!-- CHECKOUT PAGE (hidden by default) -->
-<div id="checkoutPage" style="display:none; padding:20px;">
-  <h2>Order Confirmation</h2>
-  <div id="checkout-items"></div>
-  <p id="checkout-total">Total: $0.00</p>
-  <p>Thank you for your order! Our team will contact you shortly.</p>
-</div>
+    <button class="mobile-cart-btn" aria-label="View Cart">🛒 Cart</button>
 
 
-  
-  <!-- Testimonials -->
-  <div class="testimonials">
-    <h3>What Our Customers Say</h3>
-    <div class="testimonial">
-      <p>"Great quality rims! Highly recommend this product for anyone in the industry." - John Doe</p>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent service and fast delivery. Very happy with the purchase!" - Jane Smith</p>
-    </div>
-    <div class="testimonial">
-      <p>"The durability of the product is impressive. It's been a great addition to our fleet." - Mike Brown</p>
-    </div>
-  </div>
+    <!-- Inside mobile menu -->
+    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌙 Toggle
+      Theme</button>
 
-  <!-- FAQ Section -->
-  <div class="faq">
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-item">
-      <h4>Q: What sizes do you offer?</h4>
-      <p>A: We offer a wide range of sizes, including W8x36", W8x36", and W8x36" rims.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Q: How do I place an order?</h4>
-      <p>A: Select your desired size, view the rim details, and go to the quote page to order.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Q: Do you offer bulk pricing?</h4>
-      <p>A: Yes, we offer discounts for bulk purchases. Contact us directly for a custom quote.</p>
-    </div>
-  </div>
+
+    <script src="script.js"></script>
+  </nav>
 
 
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-logo">CHENHUA AUTO</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+
+  <header class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="movie/agric.mp4" type="video/mp4">
+      <!-- Fallback image if video fails -->
+      <img src="" alt="Hero Background" class="hero-fallback">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Welcome to CHENHUA AUTO</h1>
+      <p>Your Trusted Partner in Agricultural Rims & Wheels</p>
+      <div class="hero-buttons">
+        <a href="#products" class="cta-btn">Explore Products</a>
+        <a href="about.html" class="scroll-down">↓ Scroll Down</a>
       </div>
     </div>
+  </header>
+
+
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <h2 class="featured-text">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/agric 3.jpg" alt="Product 1" />
+        <h3>Product One</h3>
+        <p class="price">$99.99</p>
+        <button class="btn">View Details</button>
+      </div>
+      <div class="product-card">
+        <img src="images/agric 2.jpg" alt="Product 2" />
+        <h3>Product Two</h3>
+        <p class="price">$149.99</p>
+        <button class="btn">View Details</button>
+      </div>
+      <div class="product-card">
+        <img src="images/agric 1.jpg" alt="Product 3" />
+        <h3>Product Three</h3>
+        <p class="price">$199.99</p>
+        <button class="btn">View Details</button>
+      </div>
+      <div class="product-card">
+        <img src="images/agric 4.jpg" alt="Product 2" />
+        <h3>Product Two</h3>
+        <p class="price">$149.99</p>
+        <button class="btn">View Details</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="why-choose-us">
+    <h2 class="h2">Why Choose Us</h2>
+    <hr class="separator" />
+    <div class="usp-wrapper">
+      <div class="usp-item">
+        <i class="fas fa-shield-alt usp-icon"></i>
+        <p class="usp-text">Durability</p>
+      </div>
+      <div class="usp-item">
+        <i class="fas fa-th-large usp-icon"></i>
+        <p class="usp-text">Wide Range</p>
+      </div>
+      <div class="usp-item">
+        <i class="fas fa-bolt usp-icon"></i>
+        <p class="usp-text">Fast Delivery</p>
+      </div>
+      <div class="usp-item">
+        <i class="fas fa-cogs usp-icon"></i>
+        <p class="usp-text">Customization</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="testimonials">
+    <h2 class="c2">what our customer say</h2>
+    <hr class="separator" />
+    <div class="testimonial-wrapper">
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=1" alt="Customer 1" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Daniel Kingston</p>
+            <div class="stars">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Excellent service and amazing product quality!”</p>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=2" alt="Customer 2" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Sarah Lawson</p>
+            <div class="stars">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Fast delivery and great customer support.”</p>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=3" alt="Customer 3" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Mark Taylor</p>
+            <div class="stars">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Highly recommend for their professionalism and quality.”</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section class="faq-section">
+    <h2 class="faq-text">Frequently Asked Questions</h2>
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What is your return policy?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer">
+          You can return any item within 30 days of delivery. Please ensure it is unused and in original packaging.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does shipping take?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer">
+          Domestic shipping takes 3–5 business days. International orders may take up to 10–15 business days.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you offer customization options?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer">
+          Yes, we offer customization for bulk orders. Please contact our team with your specific requirements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How can I track my order?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer">
+          Once your order is shipped, we will send you a tracking number via email or SMS.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+
+          // Optional: close others
+          faqItems.forEach(other => {
+            if (other !== item) {
+              other.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & About -->
+      <div class="footer-section footer-logo">
+        <img src="images/agric 3.jpg" alt="CHENHUA AUTO Logo" />
+
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <!-- <li><a href="#">FAQs</a></li> -->
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Dongying, China</li>
+          <li><i class="fas fa-phone-alt"></i> +86 546 6880070</li>
+          <li><i class="fas fa-envelope"></i> jinyueauto@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Legal Bar -->
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> CHENHUA AUTO. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a> |<a href="#">Terms of Service</a>
-      </div>
+      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+          Service</a></p>
     </div>
   </footer>
-
-
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
 </body>
 
 </html>
