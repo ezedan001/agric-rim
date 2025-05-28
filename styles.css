@@ -573,9 +573,9 @@ body.dark-mode .footer{
 
 .featured-products {
 
-  max-width: 1500px;
+  /* max-width: 1400px; */
   margin: 0px auto;
-  padding: 10px 76px;
+  padding: 10px 50px;
   text-align: center;
 }
 
@@ -830,7 +830,7 @@ body.dark-mode .footer{
   }
 
   .testimonial-item {
-    max-width: 73%;
+    max-width: 80%;
     max-height: 200px;
     margin-bottom: 1.5rem;
   }
@@ -1035,6 +1035,15 @@ body.dark-mode .footer{
 
 
 
+
+
+
+
+
+
+
+
+
  /* Floating container right side */
   /* .floating-right {
     position: fixed;
@@ -1049,14 +1058,13 @@ body.dark-mode .footer{
 
   .floating-right {
   position: fixed;
-  top: 54%;
+  top: 40%;
   right: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   z-index: 10000;
-  transition: opacity 0.30s ease-in ;
-  /* transition: opacity 0.1s ease-out; */
+  transition: opacity 0.40s ease;
 }
 
 
@@ -1161,19 +1169,3 @@ body.dark-mode .footer{
     border-radius: 6px;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
