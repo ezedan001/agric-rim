@@ -428,6 +428,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Back to Top Button -->
   <!-- Floating Contact Panel -->
   
@@ -437,44 +451,45 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body> -->
-
-<!-- Floating right side -->
+<!-- Floating Contact Buttons -->
+<!-- Right Floating Buttons -->
 <div class="floating-right">
-  <div class="floating-btn whatsapp" onclick="openWhatsApp()" aria-label="Chat on WhatsApp" role="button" tabindex="0">
+  <div class="floating-btn whatsapp" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
     <span class="tooltip">WhatsApp</span>
   </div>
-  <div class="floating-btn wechat" onclick="openWeChat()" aria-label="Chat on WeChat" role="button" tabindex="0">
+  <div class="floating-btn wechat" onclick="openWeChat()" aria-label="Chat on WeChat">
     <i class="fab fa-weixin"></i>
     <span class="tooltip">WeChat</span>
   </div>
-  <div class="floating-btn gmail" onclick="openGmail()" aria-label="Send Email" role="button" tabindex="0">
+  <div class="floating-btn gmail" onclick="openGmail()" aria-label="Send Email">
     <i class="fas fa-envelope"></i>
     <span class="tooltip">Email</span>
   </div>
 </div>
 
-<!-- Bottom right floating buttons -->
+<!-- Bottom Right Floating Buttons -->
 <div class="floating-bottom-right">
-  <div class="floating-btn bottom livechat" onclick="openLiveChat()" aria-label="Open Live Chat" role="button" tabindex="0" title="Live Chat">
-    <i class="fas fa-comments"></i>
-    <span class="tooltip">Live Chat</span>
-  </div>
-  <div class="floating-btn bottom backtotop" onclick="scrollToTop()" aria-label="Back to Top" role="button" tabindex="0" title="Back to Top">
+  <div class="floating-btn bottom backtotop" onclick="scrollToTop()" aria-label="Back to Top">
     <i class="fas fa-arrow-up"></i>
     <span class="tooltip">Back to Top</span>
+  </div>
+  <div class="floating-btn bottom livechat" onclick="openLiveChat()" aria-label="Live Chat">
+    <i class="fas fa-comments"></i>
+    <span class="tooltip">Live Chat</span>
   </div>
 </div>
 
 <!-- WeChat Modal -->
-<div id="wechatModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="wechatTitle" aria-describedby="wechatDesc">
+<div id="wechatModal" class="modal">
   <div class="modal-content">
-    <h2 id="wechatTitle">Scan WeChat QR Code</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/WeChat_logo.svg/1024px-WeChat_logo.svg.png" alt="WeChat QR Code placeholder" />
-    <p id="wechatDesc">Add us on WeChat by scanning this QR code or search ID: <strong>yourwechatid</strong></p>
+    <h2>Scan WeChat QR Code</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/WeChat_logo.svg/1024px-WeChat_logo.svg.png" alt="WeChat QR Code">
+    <p>Add us by scanning or search ID: <strong>yourwechatid</strong></p>
     <button class="modal-close" onclick="closeWeChatModal()">Close</button>
   </div>
 </div>
+
 
 <script>
   // Prompt for customer name, then open WhatsApp chat with personalized message
@@ -549,7 +564,7 @@ function closeWeChatModal() {
 
   // Prompt for name then open Gmail compose window with personalized message
  async function openGmail() {
-    const email = "karicai@chenhuaauto.com"; // Replace with your boss's email
+    const gmail = "karicai@chenhuaauto.com"; // Replace with your boss's email
     const subject = encodeURIComponent("Order Inquiry - Agricultural Rims");
 
     let country = "Unknown Country";
@@ -573,7 +588,7 @@ function closeWeChatModal() {
       `[Your Name]`
     );
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${gmail}&su=${subject}&body=${body}`;
     window.open(gmailUrl, '_blank');
   }
 
@@ -638,26 +653,25 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 </script>
 
 
+
+
+
 <script>
-  let lastScrollTop = 0;
-  const floatingRight = document.querySelector('.floating-right');
+  window.addEventListener("scroll", function () {
+    const floatingRight = document.querySelector(".floating-right");
+    const floatingBottom = document.querySelector(".floating-bottom-right");
+    const scrollY = window.scrollY;
 
-  window.addEventListener('scroll', function () {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollTop < lastScrollTop) {
-      // User is scrolling up – hide floating-right
-      floatingRight.style.opacity = '0';
-      floatingRight.style.pointerEvents = 'none';
+    if (scrollY > 200) {
+      floatingRight.classList.add("visible");
+      floatingBottom.classList.add("visible");
     } else {
-      // User is scrolling down – show floating-right
-      floatingRight.style.opacity = '1';
-      floatingRight.style.pointerEvents = 'auto';
+      floatingRight.classList.remove("visible");
+      floatingBottom.classList.remove("visible");
     }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 </script>
+
 
 
 
