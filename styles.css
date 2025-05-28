@@ -575,7 +575,7 @@ body.dark-mode .footer{
 
   /* max-width: 1400px; */
   margin: 0px auto;
-  padding: 10px 50px;
+  padding: 5px 76px;
   text-align: center;
 }
 
@@ -830,7 +830,7 @@ body.dark-mode .footer{
   }
 
   .testimonial-item {
-    max-width: 80%;
+    max-width: 73%;
     max-height: 200px;
     margin-bottom: 1.5rem;
   }
@@ -1021,3 +1021,158 @@ body.dark-mode .footer{
   font-size: 0.9rem;
   color: #000000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Floating container right side */
+  /* .floating-right {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+  } */
+
+  .floating-right {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10000;
+  transition: opacity 0.40s ease;
+}
+
+
+  /* Buttons style */
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .floating-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .floating-btn.whatsapp { background: #25d366; }
+  .floating-btn.wechat { background: #09b83e; }
+  .floating-btn.gmail { background: #d44638; }
+  .floating-btn.livechat { background: #007bff; }
+  .floating-btn.backtotop { background: #333; }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    right: 60px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+  }
+
+  .floating-btn:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Bottom right container */
+  .floating-bottom-right {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+  }
+
+  .floating-btn.bottom {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    transition: opacity 0.45s ease;
+  }
+
+  /* Modal for WeChat QR */
+  .modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  max-width: 350px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-close {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: red;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

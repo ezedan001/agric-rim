@@ -425,6 +425,243 @@
           Service</a></p>
     </div>
   </footer>
+
+
+
+  <!-- Back to Top Button -->
+  <!-- Floating Contact Panel -->
+  
+ 
+<!-- 
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body> -->
+
+<!-- Floating right side -->
+<div class="floating-right">
+  <div class="floating-btn whatsapp" onclick="openWhatsApp()" aria-label="Chat on WhatsApp" role="button" tabindex="0">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">WhatsApp</span>
+  </div>
+  <div class="floating-btn wechat" onclick="openWeChat()" aria-label="Chat on WeChat" role="button" tabindex="0">
+    <i class="fab fa-weixin"></i>
+    <span class="tooltip">WeChat</span>
+  </div>
+  <div class="floating-btn gmail" onclick="openGmail()" aria-label="Send Email" role="button" tabindex="0">
+    <i class="fas fa-envelope"></i>
+    <span class="tooltip">Email</span>
+  </div>
+</div>
+
+<!-- Bottom right floating buttons -->
+<div class="floating-bottom-right">
+  <div class="floating-btn bottom livechat" onclick="openLiveChat()" aria-label="Open Live Chat" role="button" tabindex="0" title="Live Chat">
+    <i class="fas fa-comments"></i>
+    <span class="tooltip">Live Chat</span>
+  </div>
+  <div class="floating-btn bottom backtotop" onclick="scrollToTop()" aria-label="Back to Top" role="button" tabindex="0" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+    <span class="tooltip">Back to Top</span>
+  </div>
+</div>
+
+<!-- WeChat Modal -->
+<div id="wechatModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="wechatTitle" aria-describedby="wechatDesc">
+  <div class="modal-content">
+    <h2 id="wechatTitle">Scan WeChat QR Code</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/WeChat_logo.svg/1024px-WeChat_logo.svg.png" alt="WeChat QR Code placeholder" />
+    <p id="wechatDesc">Add us on WeChat by scanning this QR code or search ID: <strong>yourwechatid</strong></p>
+    <button class="modal-close" onclick="closeWeChatModal()">Close</button>
+  </div>
+</div>
+
+<script>
+  // Prompt for customer name, then open WhatsApp chat with personalized message
+function openWhatsApp() {
+  // WhatsApp Number (without + or - symbols)
+  const phoneNumber = "8618054365167"; // Replace with your number
+
+  // Product to auto-insert
+  const product = "agricultural rims (18-inch)";
+
+  // Rotate a few professional messages
+  const messages = [
+    `Hello, I want to order ${product}. Please assist me.`,
+    `Hi, I’m interested in buying ${product}. Kindly send me more details.`,
+    `Greetings, I’m looking to purchase ${product}. Can you help me?`,
+    `Hello CHENHUA AUTO, I’m ready to buy ${product}. Please assist.`,
+    `Good day, I’d like to get a quote for ${product}.`
+  ];
+
+  // Pick a random message
+  const baseMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  // Detect customer location (basic, optional fallback)
+  fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+      const location = data.country_name ? ` I'm located in ${data.country_name}.` : "";
+      const fullMessage = encodeURIComponent(baseMessage + location);
+      window.open(`https://wa.me/${phoneNumber}?text=${fullMessage}`, '_blank');
+    })
+    .catch(() => {
+      // Fallback if location fails
+      const fallbackMessage = encodeURIComponent(baseMessage);
+      window.open(`https://wa.me/${phoneNumber}?text=${fallbackMessage}`, '_blank');
+    });
+}
+
+  // Open WeChat modal
+ <!-- Add this inside your <head> -->
+async function openWeChat() {
+  const modal = document.getElementById('wechatModal');
+  const desc = document.getElementById('wechatDesc');
+
+  // Step 1: Detect country via IP
+  let country = "your country";
+  try {
+    const res = await fetch("https://ipapi.co/json");
+    const data = await res.json();
+    country = data.country_name || "your country";
+  } catch (e) {
+    console.warn("Could not fetch country info.");
+  }
+
+  // Step 2: Auto message
+  const message = `Hello! I'm from ${country}. I want to order agricultural rims. Please assist me.`;
+
+  // Step 3: Update message in modal
+  desc.innerHTML = `
+    Add us on WeChat by scanning this QR code or search ID: <strong>a6115991</strong><br><br>
+    <em>Automatic message:</em><br>
+    <span style="color:green;">${message}</span>
+  `;
+
+  // Show modal
+  modal.style.display = "block";
+}
+
+function closeWeChatModal() {
+  document.getElementById('wechatModal').style.display = "none";
+}
+
+
+  // Prompt for name then open Gmail compose window with personalized message
+ async function openGmail() {
+    const email = "karicai@chenhuaauto.com"; // Replace with your boss's email
+    const subject = encodeURIComponent("Order Inquiry - Agricultural Rims");
+
+    let country = "Unknown Country";
+
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      if (response.ok) {
+        const data = await response.json();
+        country = data.country_name || country;
+      }
+    } catch (error) {
+      // Ignore errors and keep default country value
+    }
+
+    const body = encodeURIComponent(
+      `Hello CHENHUA AUTO,\n\n` +
+      `I would like to order agricultural rims.\n\n` +
+      `Please provide pricing and availability.\n\n` +
+      `My country: ${country}\n\n` +
+      `Thank you,\n` +
+      `[Your Name]`
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, '_blank');
+  }
+
+  // Placeholder live chat open function (replace with your live chat integration)
+  function openLiveChat() {
+    alert("Live chat will be available soon. Meanwhile, you can contact us via WhatsApp or Email.");
+  }
+
+  // Scroll to top smoothly
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Accessibility: allow keyboard Enter key activation for floating buttons
+  document.querySelectorAll('.floating-btn').forEach(btn => {
+    btn.addEventListener('keypress', function(e){
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+
+  // Close modal when clicking outside content or pressing Escape key
+  window.onclick = function(event) {
+    const modal = document.getElementById('wechatModal');
+    if(event.target === modal) {
+      closeWeChatModal();
+    }
+  };
+  window.addEventListener('keydown', function(e){
+    if(e.key === "Escape") {
+      closeWeChatModal();
+    }
+  });
+</script>
+  <!-- End of Tawk.to Script -->
+
+
+
+  <script>
+  function openLiveChat() {
+    if (window.Tawk_API && typeof Tawk_API.maximize === 'function') {
+      Tawk_API.maximize();
+    } else {
+      alert('Live chat is loading, please wait a moment.');
+    }
+  }
+</script>
+
+<!-- Tawk.to Chat widget script -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+
+<script>
+  let lastScrollTop = 0;
+  const floatingRight = document.querySelector('.floating-right');
+
+  window.addEventListener('scroll', function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop < lastScrollTop) {
+      // User is scrolling up – hide floating-right
+      floatingRight.style.opacity = '0';
+      floatingRight.style.pointerEvents = 'none';
+    } else {
+      // User is scrolling down – show floating-right
+      floatingRight.style.opacity = '1';
+      floatingRight.style.pointerEvents = 'auto';
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+
+
+
+
 </body>
 
 </html>
