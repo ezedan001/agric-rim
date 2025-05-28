@@ -573,9 +573,9 @@ body.dark-mode .footer{
 
 .featured-products {
 
-  /* max-width: 1400px; */
+  max-width: 1500px;
   margin: 0px auto;
-  padding: 5px 76px;
+  padding: 10px 76px;
   text-align: center;
 }
 
@@ -1049,13 +1049,14 @@ body.dark-mode .footer{
 
   .floating-right {
   position: fixed;
-  top: 40%;
+  top: 54%;
   right: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   z-index: 10000;
-  transition: opacity 0.40s ease;
+  transition: opacity 0.30s ease-in ;
+  /* transition: opacity 0.1s ease-out; */
 }
 
 
