@@ -54,8 +54,8 @@ function toggleDarkMode() {
     if (mobileModeToggle) mobileModeToggle.textContent = '☀️ Light Mode';
   } else {
     localStorage.setItem('theme', 'light');
-    modeToggle.textContent = '🌙'; // moon icon
-    if (mobileModeToggle) mobileModeToggle.textContent = '🌙 Dark Mode';
+    modeToggle.textContent = '🌓'; // moon icon
+    if (mobileModeToggle) mobileModeToggle.textContent = '🌓 Dark Mode';
   }
 }
 
