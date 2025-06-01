@@ -1196,7 +1196,6 @@ body.dark-mode .footer {
 
 
 
-
 /* Modal Background */
 .modal {
   display: none;
@@ -1306,7 +1305,9 @@ body.dark-mode .footer {
   .modal-content {
     padding: 1.5rem;
   }
-}
+}  
+
+
 
 
 
