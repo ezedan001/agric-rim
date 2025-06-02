@@ -898,10 +898,12 @@ body.dark-mode .footer {
 
 /* Responsive Tweaks for Phone */
 @media (max-width: 350px) {
+  .testimonials {
+    padding: 50px 60px;
+  }
   .testimonial-header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 30px 65px;
   }
   .testimonial-img {
     margin-bottom: 10px;
