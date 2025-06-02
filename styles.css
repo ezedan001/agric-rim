@@ -886,11 +886,12 @@ body.dark-mode .footer {
 /* Responsive Tweaks for Tablet */
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 30px 30px;
-    margin: 0 auto;
+    padding: 20px 0px;
+    
   }
   .testimonial-wrapper {
     gap: 25px;
+    padding: 0px 60px;
   }
   .testimonial-text {
     font-size: 0.95rem;
