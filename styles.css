@@ -886,7 +886,7 @@ body.dark-mode .footer {
 /* Responsive Tweaks for Tablet */
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 30px 60px;
+    padding: 30px 30px;
     margin: 0 auto;
   }
   .testimonial-wrapper {
