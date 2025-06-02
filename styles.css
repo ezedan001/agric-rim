@@ -887,12 +887,14 @@ body.dark-mode .footer {
 @media (max-width: 1024px) {
   .testimonials {
     padding: 20px 0px;
-    
+
   }
+
   .testimonial-wrapper {
     gap: 25px;
-    padding:20px 30px;
+    padding: 5px 75px;
   }
+
   .testimonial-text {
     font-size: 0.95rem;
   }
@@ -903,14 +905,18 @@ body.dark-mode .footer {
   .testimonial-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
   }
+
   .testimonial-img {
     margin-bottom: 10px;
     margin-right: 0;
   }
+
   .testimonial-text {
     padding-left: 0;
   }
+
   .testimonial-text::before {
     left: 0;
     top: -15px;
@@ -1299,13 +1305,25 @@ body.dark-mode .footer {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(60px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Modal Heading */
@@ -1382,7 +1400,7 @@ body.dark-mode .footer {
   .modal-content {
     padding: 1.5rem;
   }
-}  
+}
 
 
 
@@ -1397,7 +1415,3 @@ body.dark-mode .footer {
     font-size: 28px;
   }
 }
-
-
-
-
