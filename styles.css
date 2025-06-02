@@ -812,7 +812,7 @@ body.dark-mode .footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -891,7 +891,7 @@ body.dark-mode .footer {
   }
   .testimonial-wrapper {
     gap: 25px;
-    padding: 0px 60px;
+    padding:20px 50px;
   }
   .testimonial-text {
     font-size: 0.95rem;
