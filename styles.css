@@ -667,7 +667,7 @@ body.dark-mode .footer {
 /* Phones */
 @media (max-width: 600px) {
   .featured-products {
-    padding: 40px 54px;
+    padding: 40px 64px;
   }
 
   .featured-products .featured-text {
@@ -901,6 +901,7 @@ body.dark-mode .footer {
   .testimonial-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 30px 65px;
   }
   .testimonial-img {
     margin-bottom: 10px;
