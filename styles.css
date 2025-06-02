@@ -819,7 +819,7 @@ body.dark-mode .footer {
 .testimonial-item {
   background: #1c1c1c;
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -886,10 +886,10 @@ body.dark-mode .footer {
 /* Responsive Tweaks for Tablet */
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 40px 25px;
+    padding: 10px 50px;
   }
   .testimonial-wrapper {
-    gap: 20px;
+    gap: 25px;
   }
   .testimonial-text {
     font-size: 0.95rem;
