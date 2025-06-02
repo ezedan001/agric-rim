@@ -886,7 +886,8 @@ body.dark-mode .footer {
 /* Responsive Tweaks for Tablet */
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 30px 17px;
+    padding: 30px 60px;
+    margin: 0 auto;
   }
   .testimonial-wrapper {
     gap: 25px;
@@ -897,7 +898,7 @@ body.dark-mode .footer {
 }
 
 /* Responsive Tweaks for Phone */
-@media (max-width: 600px) {
+@media (max-width: 350px) {
   .testimonial-header {
     flex-direction: column;
     align-items: flex-start;
