@@ -796,7 +796,7 @@ body.dark-mode .contact-info {
 #team-section h2 {
   font-size: 2.4rem;
   margin-bottom: 40px;
-  color: #000000;
+  color: #f4f4f4;
 }
 
 /* Grid Layout */
@@ -914,7 +914,7 @@ body.dark-mode .contact-info {
   }
 
   .team-info {
-    padding: 34px;
+    padding: 14px;
 
   }
 
@@ -928,14 +928,14 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 370px;
+    height: 350px;
     
   }
 }
 
 @media (max-width: 480px) {
   #team-section {
-    padding: 40px 80px;
+    padding: 40px 10px;
   }
 
   #team-section h2 {
@@ -956,7 +956,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 160px;
+    height: 150px;
   }
 }
 
