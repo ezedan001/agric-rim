@@ -935,7 +935,7 @@ body.dark-mode .contact-info {
 
 @media (max-width: 480px) {
   #team-section {
-    padding: 40px 30px;
+    padding: 40px 80px;
   }
 
   #team-section h2 {
@@ -956,7 +956,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 260px;
+    height: 160px;
   }
 }
 
