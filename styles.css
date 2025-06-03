@@ -667,7 +667,8 @@ body.dark-mode .footer {
 /* Phones */
 @media (max-width: 600px) {
   .featured-products {
-    padding: 40px 64px;
+    padding: 30px 30px;
+    max-width: 90%;
   }
 
   .featured-products .featured-text {
@@ -887,11 +888,10 @@ body.dark-mode .footer {
 @media (max-width: 1024px) {
   .testimonials {
     padding: 20px 30px;
-
   }
 
   .testimonial-wrapper {
-    gap: 25px;
+    gap: 20px;
   }
 
   .testimonial-text {
