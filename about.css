@@ -796,7 +796,7 @@ body.dark-mode .contact-info {
 #team-section h2 {
   font-size: 2.4rem;
   margin-bottom: 40px;
-  color: #f4f4f4;
+  color: #000000;
 }
 
 /* Grid Layout */
@@ -914,7 +914,7 @@ body.dark-mode .contact-info {
   }
 
   .team-info {
-    padding: 54px;
+    padding: 34px;
 
   }
 
@@ -928,7 +928,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 470px;
+    height: 370px;
     
   }
 }
@@ -956,7 +956,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 240px;
+    height: 170px;
   }
 }
 
