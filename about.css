@@ -908,14 +908,12 @@ body.dark-mode .contact-info {
 
 @media (max-width: 768px) {
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 70%;
-    margin: 0 auto;
   }
 
   .team-info {
-    padding: 14px;
-
+    padding: 20px;
   }
 
   .team-info h3 {
@@ -929,7 +927,6 @@ body.dark-mode .contact-info {
 
   .team-card img {
     height: 370px;
-    
   }
 }
 
@@ -1072,9 +1069,11 @@ body.dark-mode .contact-info {
   .testimonials {
     padding: 20px 30px;
   }
+
   .testimonial-wrapper {
     gap: 20px;
   }
+
   .testimonial-text {
     font-size: 0.95rem;
   }
@@ -1086,13 +1085,16 @@ body.dark-mode .contact-info {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .testimonial-img {
     margin-bottom: 10px;
     margin-right: 0;
   }
+
   .testimonial-text {
     padding-left: 0;
   }
+
   .testimonial-text::before {
     left: 0;
     top: -15px;
@@ -1123,7 +1125,8 @@ body.dark-mode .contact-info {
 .swiper {
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 40px; /* for pagination */
+  padding-bottom: 40px;
+  /* for pagination */
 }
 
 .swiper-slide {
@@ -1153,6 +1156,7 @@ body.dark-mode .contact-info {
   0% {
     box-shadow: 0 0 15px 3px orange;
   }
+
   100% {
     box-shadow: 0 0 30px 8px orange;
   }
@@ -1181,8 +1185,9 @@ body.dark-mode .contact-info {
 /* Responsive */
 @media (max-width: 768px) {
   .swiper-slide img {
-    width: 100px;
+    width: 110px;
   }
+
   .brand-partners-carousel h2 {
     font-size: 1.8rem;
   }
@@ -1190,8 +1195,9 @@ body.dark-mode .contact-info {
 
 @media (max-width: 480px) {
   .swiper-slide img {
-    width: 60px;
+    width: 90px;
   }
+
   .brand-partners-carousel h2 {
     font-size: 1.5rem;
   }
@@ -1261,6 +1267,7 @@ body.dark-mode .contact-info {
   .cta-banner h2 {
     font-size: 2.2rem;
   }
+
   .cta-banner p {
     font-size: 1.1rem;
   }
@@ -1270,9 +1277,11 @@ body.dark-mode .contact-info {
   .cta-banner {
     padding: 60px 15px;
   }
+
   .cta-banner h2 {
     font-size: 2rem;
   }
+
   .cta-button {
     padding: 14px 30px;
     font-size: 1rem;
@@ -1283,12 +1292,15 @@ body.dark-mode .contact-info {
   .cta-banner {
     padding: 50px 10px;
   }
+
   .cta-banner h2 {
     font-size: 1.6rem;
   }
+
   .cta-banner p {
     font-size: 1rem;
   }
+
   .cta-button {
     padding: 12px 24px;
     font-size: 0.95rem;
@@ -1583,13 +1595,25 @@ body.dark-mode .contact-info {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(60px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Modal Heading */
@@ -1666,7 +1690,7 @@ body.dark-mode .contact-info {
   .modal-content {
     padding: 1.5rem;
   }
-}  
+}
 
 
 
@@ -1681,7 +1705,3 @@ body.dark-mode .contact-info {
     font-size: 28px;
   }
 }
-
-
-
-
