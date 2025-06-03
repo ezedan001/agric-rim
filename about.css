@@ -1070,7 +1070,7 @@ body.dark-mode .contact-info {
 /* Responsive Tweaks for Tablet */
 @media (max-width: 1024px) {
   .testimonials {
-    padding: 50px 60px;
+    padding: 20px 30px;
   }
   .testimonial-wrapper {
     gap: 20px;
@@ -1209,7 +1209,7 @@ body.dark-mode .contact-info {
   text-align: center;
   color: #fff;
   border-top: 4px solid orange;
-  border-bottom: 4px solid orange;
+  /* border-bottom: 4px solid orange; */
 }
 
 .cta-banner .cta-content {
