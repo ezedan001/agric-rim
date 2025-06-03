@@ -956,7 +956,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 180px;
+    height: 190px;
   }
 }
 
@@ -1181,7 +1181,7 @@ body.dark-mode .contact-info {
 /* Responsive */
 @media (max-width: 768px) {
   .swiper-slide img {
-    width: 110px;
+    width: 100px;
   }
   .brand-partners-carousel h2 {
     font-size: 1.8rem;
@@ -1190,7 +1190,7 @@ body.dark-mode .contact-info {
 
 @media (max-width: 480px) {
   .swiper-slide img {
-    width: 90px;
+    width: 60px;
   }
   .brand-partners-carousel h2 {
     font-size: 1.5rem;
