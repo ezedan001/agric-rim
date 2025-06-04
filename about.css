@@ -833,7 +833,7 @@ body.dark-mode .contact-info {
 .team-info {
   padding: 18px;
   color: #fff;
-  text-align: left;
+  text-align: center;
 }
 
 .team-info h3 {
@@ -915,7 +915,7 @@ body.dark-mode .contact-info {
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    max-width: 95%;
+    max-width: 85%;
   }
 
   .team-info {
@@ -932,7 +932,7 @@ body.dark-mode .contact-info {
   }
 
   .team-card img {
-    height: 220px;
+    height: 400px;
   }
 }
 
