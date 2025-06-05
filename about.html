@@ -825,111 +825,112 @@ Our CHENHUA AUTO team will get back to you shortly. ✅`;
 
       // Gmail Contact Enhancer Script - Full Powerful Version
 
-      
-      // 🌍 Detect customer country using IP
-      async function getCustomerLocation() {
-        try {
-          const res = await fetch('https://ipapi.co/json');
-          return await res.json();
-        } catch (err) {
-          console.error('Location fetch failed:', err);
-          return { country_name: 'Unknown' };
-        }
-      }
+      // 🌍 Detects customer country using IP
+async function getCustomerLocation() {
+  const res = await fetch('https://ipapi.co/json');
+  return await res.json();
+}
 
-      // 📧 Auto-open Gmail with pre-filled message
-      function openGmail(name, company, phone, product, country, message) {
-        const subject = encodeURIComponent(`Inquiry from ${company}`);
-        const body = encodeURIComponent(`Hello CHENHUA AUTO Team 👋,
+// 📧 Auto-open Gmail with pre-filled message
+function openGmail(name, company, phone, product, country, message) {
+  const subject = encodeURIComponent(`Inquiry from ${company}`);
+  const body = encodeURIComponent(`Hello CHENHUA AUTO Team 👋,
 
-        ${message}
+${message}
 
-        📌 Customer Details:
-        👤 Name: ${name}
-        🏢 Company: ${company}
-        📞 Phone: ${phone}
-        📦 Product: ${product}
-        🌍 Country: ${country}
+📌 Customer Details:
 
-        Best regards,
-        ${name}`);
+👤 Name: ${name}
+🏢 Company: ${company}
+📞 Phone: ${phone}
+📦 Product: ${product}
+🌍 Country: ${country}
 
-        const email = 'ezesomtochukwu588@gmail.com'; // ✅ Fixed email address
-        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, '_blank');
-      }
+Best regards,
+${name}`);
 
-      // ✅ Random product
-      function getRandomProduct() {
-        const products = [
-          'Agricultural Rim', 'Truck Tire', 'Tractor Rim', 'Wheel Hub',
-          'Farm Trailer Rim', 'Heavy Duty Truck Tire', 'Combine Harvester Rim', 'Industrial Equipment Rim'
-        ];
-        return products[Math.floor(Math.random() * products.length)];
-      }
+  // ✅ Updated Gmail link that works on phones, tablets, and laptops
+  window.location.href = `mailto:ezesomtochukwu588@gmail.com?subject=${subject}&body=${body}`;
+}
 
-      // 💬 Generate message templates
-      function generateMessages(name, product) {
-        return [
-          `I am interested in your premium ${product}. Please send full specifications and pricing. 🔍`,
-          `Can you provide a detailed catalog for ${product}? I am sourcing for our upcoming procurement. 📘`,
-          `Hello, I represent a company seeking bulk purchase of ${product}. Kindly share your best price and lead time. 📦`,
-          `Good day! We found your ${product} on your website. Could you send us your full product line and MOQ? 🌟`,
-          `We are currently expanding our operations and looking for a reliable supplier for ${product}. Please send full quotation and export terms. 💼`,
-          `This is ${name} from a company dealing in vehicle parts. We’re looking into sourcing ${product}. Please advise availability, payment, and shipping options. ✍️`,
-          `Our company is building long-term partnerships in your sector. Interested in ${product}, kindly provide full specs, certifications, and quality assurance details. 📄`,
-          `Dear Sales Team, we plan to import a large quantity of ${product} this quarter. Please provide your latest catalog, price list, and cooperation terms. 📊`
-        ];
-      }
+// ✅ Suggest random product
+function getRandomProduct() {
+  const products = [
+    'Agricultural Rim',
+    'Truck Tire',
+    'Tractor Rim',
+    'Wheel Hub',
+    'Farm Trailer Rim',
+    'Heavy Duty Truck Tire',
+    'Combine Harvester Rim',
+    'Industrial Equipment Rim'
+  ];
+  return products[Math.floor(Math.random() * products.length)];
+}
 
-      // 📱 Greeting based on time
-      function getGreeting() {
-        const hour = new Date().getHours();
-        if (hour < 12) return 'Good morning';
-        else if (hour < 18) return 'Good afternoon';
-        return 'Good evening';
-      }
+// 💬 Generate professional message templates
+function generateMessages(name, product) {
+  return [
+    `I am interested in your premium ${product}. Please send full specifications and pricing. 🔍`,
+    `Can you provide a detailed catalog for ${product}? I am sourcing for our upcoming procurement. 📘`,
+    `Hello, I represent a company seeking bulk purchase of ${product}. Kindly share your best price and lead time. 📦`,
+    `Good day! We found your ${product} on your website. Could you send us your full product line and MOQ? 🌟`,
+    `We are currently expanding our operations and looking for a reliable supplier for ${product}. Please send full quotation and export terms. 💼`,
+    `This is ${name} from a company dealing in vehicle parts. We’re looking into sourcing ${product}. Please advise availability, payment, and shipping options. ✍️`,
+    `Our company is building long-term partnerships in your sector. Interested in ${product}, kindly provide full specs, certifications, and quality assurance details. 📄`,
+    `Dear Sales Team, we plan to import a large quantity of ${product} this quarter. Please provide your latest catalog, price list, and cooperation terms. 📊`
+  ];
+}
 
-      // 🚨 Vibrate on open (mobile support)
-      function vibrateAlert() {
-        if (navigator.vibrate) navigator.vibrate(200);
-      }
+// 🚨 Vibrate when modal opens
+function vibrateAlert() {
+  if (navigator.vibrate) navigator.vibrate(200);
+}
 
-      // 📬 Modal controls
-      function openGmailModal() {
-        document.getElementById('gmailModal').style.display = 'block';
-        vibrateAlert();
-      }
+// 📱 Time-based greeting
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good morning';
+  else if (hour < 18) return 'Good afternoon';
+  else return 'Good evening';
+}
 
-      function closeGmailModal() {
-        document.getElementById('gmailModal').style.display = 'none';
-      }
+// 🌍 Main contact form handler
+async function handleGmailFormSubmit(e) {
+  e.preventDefault();
 
-      // 🌍 Handle form submission
-      async function handleGmailFormSubmit(e) {
-        e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const product = document.getElementById('product').value.trim() || getRandomProduct();
 
-        const name = document.getElementById('name').value.trim();
-        const company = document.getElementById('company').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const productInput = document.getElementById('product').value.trim();
-        const product = productInput || getRandomProduct();
+  const locationData = await getCustomerLocation();
+  const country = locationData.country_name || 'Unknown';
 
-        const locationData = await getCustomerLocation();
-        const country = locationData.country_name || 'Unknown';
+  const messages = generateMessages(name, product);
+  const greeting = getGreeting();
+  const selectedMessage = `${greeting} 👋,
 
-        const greeting = getGreeting();
-        const messageList = generateMessages(name, product);
-        const message = `${greeting} 👋,\n\n${messageList[Math.floor(Math.random() * messageList.length)]}`;
+${messages[Math.floor(Math.random() * messages.length)]}`;
 
-        openGmail(name, company, phone, product, country, message);
-      }
+  openGmail(name, company, phone, product, country, selectedMessage);
+}
 
-      // 📞 Initialize form listener on load
-      window.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('gmailForm');
-        if (form) form.addEventListener('submit', handleGmailFormSubmit);
-      });
+// 📬 Modal control
+function openGmailModal() {
+  document.getElementById('gmailModal').style.display = 'block';
+  vibrateAlert();
+}
+
+function closeGmailModal() {
+  document.getElementById('gmailModal').style.display = 'none';
+}
+
+// 📞 Add event listener on page load
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('gmailForm').addEventListener('submit', handleGmailFormSubmit);
+});
 
 
 
