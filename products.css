@@ -695,7 +695,7 @@ body.dark-mode .footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .product-grid {
     padding: 30px 50px;
     gap: 16px;
