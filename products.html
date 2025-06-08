@@ -2,1026 +2,1125 @@
 <html lang="en">
 
 <head>
-  <!-- Meta Tags for SEO & Mobile Responsiveness -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CHENHUA AUTO | Premium Agricultural & Truck Rims</title>
   <meta name="description"
-    content="CHENHUA AUTO - Premium Agricultural Rims for modern farming and machinery solutions.">
-  <meta name="keywords" content="agricultural rims, farm wheels, tractor rims, durable rims, CHENHUA AUTO">
-  <meta name="author" content="CHENHUA AUTO">
-  <title>CHENHUA AUTO | Agricultural Rims</title>
+    content="CHENHUA AUTO supplies high-performance agricultural and truck rims globally. Built for durability, quality, and global reliability.">
+  <meta name="keywords" content="agricultural rims, tractor rims, truck rims, heavy-duty wheels, chenhua auto">
+  <meta name="author" content="CHENHUA AUTO Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chenhuaauto.com/">
 
-  <!-- Open Graph / Social Share -->
-  <meta property="og:title" content="CHENHUA AUTO - Premium Agricultural Rims">
-  <meta property="og:description" content="Shop quality tractor & machinery rims. Trusted by professionals.">
-  <meta property="og:image" content="img/og-image.jpg">
-  <meta property="og:url" content="https://www.chenhuaauto.com">
+  <!-- Open Graph / Facebook Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CHENHUA AUTO | Premium Rims for Agriculture & Transport">
+  <meta property="og:description" content="Durable, tested, and trusted agricultural and truck rims shipped worldwide.">
+  <meta property="og:image" content="https://www.chenhuaauto.com/images/og-image.jpg">
+  <meta property="og:url" content="https://www.chenhuaauto.com/">
+
+  <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CHENHUA AUTO">
+  <meta name="twitter:description" content="Rims you can trust for agriculture and trucking industries.">
+  <meta name="twitter:image" content="https://www.chenhuaauto.com/images/twitter-card.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/agric 3.jpg">
+  <!-- Favicon and App Icons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- Google Fonts + FontAwesome Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Theme and PWA -->
+  <meta name="theme-color" content="#ff6600">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CHENHUA AUTO",
+    "url": "https://www.chenhuaauto.com",
+    "logo": "https://www.chenhuaauto.com/logo.png",
+    "description": "Global supplier of agricultural and truck rims",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-000-000-0000",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS Styles -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="products.css">
+  <!-- FontAwesome CDN (add in <head>) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
 </head>
+
 
 <body>
 
-  <!-- Header with Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">CHENHUA AUTO</div>
-      <ul class="nav-links">
+
+
+
+  <header class="container">
+
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Homepage">CHENHUA AUTO</a>
+
+    <!-- Main Navigation (Desktop) -->
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Products <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="products.html">Tractor Rims</a></li>
-            <li><a href="products.html">Combine Harvester Rims</a></li>
-            <li><a href="products.html">Custom Rims</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Company <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-          </ul>
-        </li>
-        <li><a href="#testimonial">Testimonials</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="search-bar">
-        <input type="text" placeholder="Search agricultural rims..." />
-        <button type="submit">Search</button>
-      </div>
-      <div class="search-box">
     </nav>
+
+    <!-- Right Side Controls Desktop -->
+    <div class="header-controls">
+      <!-- Language Selector -->
+      <select aria-label="Select Language" class="language-select">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+
+      <!-- Search Bar Desktop -->
+      <div class="search-container desktop-search">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button aria-label="Search">🔍</button>
+      </div>
+
+      <!-- Cart Button Desktop -->
+      <button class="cart-btn" aria-label="View Cart">🛒</button>
+
+      <!-- Dark/Light Mode Toggle Desktop -->
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+
+      <!-- Hamburger for Mobile -->
+      <button class="hamburger-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileMenu">
+        &#9776;
+      </button>
+
   </header>
 
+  <!-- Mobile Menu Panel -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" role="menu">
+    <button id="closeMobileMenu" aria-label="Close Menu" class="close-btn">&times;</button>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" role="menuitem">Home</a></li>
+      <li><a href="products.html" role="menuitem">Products</a></li>
+      <li><a href="about.html" role="menuitem">About</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+    </ul>
+
+    <select aria-label="Select Language" class="mobile-language-select">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <div class="mobile-search-container" role="search">
+      <input type="search" placeholder="Search..." aria-label="Search" />
+      <button aria-label="Search">🔍</button>
+    </div>
+
+    <button class="mobile-cart-btn" aria-label="View Cart">🛒 Cart</button>
 
 
-  <!-- Hero Banner -->
-  <section class="hero-banner">
-    <div class="hero-text">
-      <h1>Explore Our Durable Rims</h1>
-      <p>Premium truck and agricultural rims built to last</p>
+    <!-- Inside mobile menu -->
+    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌙 Toggle
+      Theme</button>
+
+
+    <script src="products.js"></script>
+  </nav>
+
+
+
+
+
+
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Our Tractor Rims</h1>
+      <p>Strong. Durable. Made for African farms.</p>
     </div>
   </section>
 
-  <!-- Search Section -->
-  <section class="product-search-section">
-    <h2>Find Your Perfect Rim</h2>
-    <div class="product-size-selection">
-      <label for="product-size">Select Size:</label>
-      <select id="product-size" name="product-size">
-        <option value="W8x36">W8x36-inch</option>
-        <option value="W8x46">W8x46-inch</option>
-        <option value="9x18">9x18-inch</option>
-        <option value="W9x18">W9x18-inch</option>
-        <option value="W10x36">W10x36-inch</option>
-        <option value="W12x46">W12x18-inch</option>
+
+
+
+
+
+  <section class="filter-section">
+    <div class="filter-group">
+      <label for="filter-size">Filter by Size:</label>
+      <select id="filter-size" onchange="filterProducts()">
+        <option value="">All Sizes</option>
+        <option value="W10×36">W10×36"</option>
+        <option value="W12×46">W12×46"</option>
+        <option value="W8x36">W8x36"</option>
+        <option value="W9x18">W9x18"</option>
+        <option value="W10x36">W10x36"</option>
+        <option value="W12x46">W12x46"</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-type">Filter by Type:</label>
+      <select id="filter-type" onchange="filterProducts()">
+        <option value="">All Types</option>
+        <option value="Disc">Disc</option>
+        <option value="Split">Split</option>
+        <option value="Solid">Solid</option>
       </select>
     </div>
   </section>
 
-  <!-- Product Section -->
-  <section class="product-section">
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric a.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-        <p class="product-price">$299.99</p>
-      </a>
-      
-      <!-- Quantity Selector -->
-      <div class="quantity-section">
-        <label for="quantity" class="quantity-label">Quantity: </label>
-        <input type="number" id="quantity" class="quantity-input" min="1" value="1" />
+
+
+
+
+
+  <section class="product-grid">
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric a.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
       </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
 
-      <form id="checkout-form" action="purchase_complete.html" method="POST">
-    <!-- form fields for shipping, payment, etc. -->
-    <button type="submit" id="buy-now" class="btn">Buy Now</button>
-</form>
-on>
-    </div>
-    </div>
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
 
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric b.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
-
-      <!-- Size Filter Dropdown -->
-      <div class="size-filter">
-        <label for="size-select">Choose Size:</label>
-        <select id="size-select">
-          <option value="all">--Choose Size--</option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-      </div>
-
-      <!-- Quantity Modal -->
-      <div id="overlay" class="overlay"></div>
-      <div id="quantity-modal" class="modal">
-        <h3>Select Quantity</h3>
-        <input type="number" id="quantity" min="1" value="1" />
-        <button id="submit-quantity">Submit</button>
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
       </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric c.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric f.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
 
-    <!-- <div class="product-card">
-      <div class="product-image-container">
-        <img src="W10×36农业黄/agric g.jpg" alt="Rim W10x36-inch" class="product-image">
-        <div class="image-overlay">
-          <span class="product-rating">★★★★☆</span>
-          <span class="product-size">Size: W10x36-inch</span>
-        </div>
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric b.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
       </div>
-      <h3 class="product-title">Duramax Wheel</h3>
-      <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-    </div> -->
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric h.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
-    </div>
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric i.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric j.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 10.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 11.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 2.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 3.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 4.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 5.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 6.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 7.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 8.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 9.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Agricultural Rim - Large</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =2.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
-
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =10.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =3.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =4.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric f.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
 
-    <!-- <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =5.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div> -->
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric h.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =6.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =7.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric i.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =8.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric j.jpg" alt="CHENHUA W10×36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <!-- <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×36农业黄/agric  =9.jpg" alt="Rim W8x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div> -->
 
-    <!-- next image 3 -->
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-8.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+    <div class="product-card" data-size="W10×36" data-type="Disc">
+      <div class="product-img">
+        <img src="W10×36农业黄/agric k.jpg" alt="CHENHUA 16 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 10” Rim</h3>
+      <p>Size: W10×36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-11.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 11.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-2.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 2.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-3.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 3.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-4.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 4.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-5.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 7.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-6.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W12×46" data-type="Disc">
+      <div class="product-img">
+        <img src="W12×46农业黄/AGRIC 8.jpg" alt="CHENHUA W12×46 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 12” Rim</h3>
+      <p>Size: W12×46 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-7.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+
+
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =2.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-1.jpg" alt="Rim W8x48-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W8x48-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =10.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <!-- <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W8×48农业黄/agric-9.jpg" alt="Rim W12x46-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W12x46-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
-    </div> -->
-
-    <!-- fouth  last  image  -->
 
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 10.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =3.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 11.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =6.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 2.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =7.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 3.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8x36" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×36农业黄/agric  =8.jpg" alt="CHENHUA W8x36 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8” Rim</h3>
+      <p>Size: W8x36 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 4.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-11.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 5.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-3.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 6.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-4.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 7.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-6.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 8.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-7.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W9×18农业黄/agric 9.jpg" alt="Rim W9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W8×48" data-type="Disc">
+      <div class="product-img">
+        <img src="W8×48农业黄/agric-8.jpg" alt="CHENHUA W8×48 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 8×48” Rim</h3>
+      <p>Size: W8×48 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <!-- last image done -->
 
 
-    <!-- <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W10×36农业黄/agric h.jpg" alt="Rim W10x36-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: W10x36-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
-    </div> -->
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  K.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 10.jpg" alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  B.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 2.jpg" alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  C.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 3.jpg " alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  D.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 4.jpg " alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  E.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 6.jpg " alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  F.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 7.jpg " alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  G.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
+
+
+    <div class="product-card" data-size="W9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="W9×18农业黄/agric 8.jpg " alt="CHENHUA W9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG 9×18” Rim</h3>
+      <p>Size: W9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  H.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">FieldMaster Pro</h3>
-        <p class="product-brief">Perfect for rugged terrain and long wear.</p>
-      </a>
-    </div>
-    <!-- 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="C9×18哈克黄/agric  I.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">Duramax Wheel</h3>
-        <p class="product-brief">Heavy-duty and corrosion resistant.</p>
-      </a>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  B.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 7.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★★</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">StrongField Rim</h3>
-        <p class="product-brief">Ideal for tractors and heavy-duty field work.</p>
-      </a>
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  D.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
     </div>
 
-    <div class="product-card">
-      <a class="link" href="faq.html">
-        <div class="product-image-container">
-          <img src="W12×46农业黄/AGRIC 8.jpg" alt="Rim 9x18-inch" class="product-image">
-          <div class="image-overlay">
-            <span class="product-rating">★★★★☆</span>
-            <span class="product-size">Size: 9x18-inch</span>
-          </div>
-        </div>
-        <h3 class="product-title">TitanForce Rim</h3>
-        <p class="product-brief">Built to last under pressure and load.</p>
-      </a>
-    </div> -->
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  E.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
+    </div>
+
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  F.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
+    </div>
+
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  G.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
+    </div>
+
+
+
+    <div class="product-card" data-size="C9×18" data-type="Disc">
+      <div class="product-img">
+        <img src="C9×18哈克黄/agric  H.jpg" alt="CHENHUA C9×18 inch Tractor Rim" />
+      </div>
+      <h3>CH-AG C9×18” Rim</h3>
+      <p>Size: C9×18 inches</p>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" class="qty-input" />
+
+      <div class="contact-buttons">
+        <button onclick="sendWhatsApp(this)">WhatsApp</button>
+        <button onclick="sendEmail(this)">Email</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 🛠️ Duplicate this block for each rim product, change data-size, name, etc. -->
+
+   
   </section>
 
-  <!-- Testimonials -->
-  <div class="testimonials">
-    <h3>What Our Customers Say</h3>
-    <div class="testimonial">
-      <p>"Great quality rims! Highly recommend this product for anyone in the industry." - John Doe</p>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent service and fast delivery. Very happy with the purchase!" - Jane Smith</p>
-    </div>
-    <div class="testimonial">
-      <p>"The durability of the product is impressive. It's been a great addition to our fleet." - Mike Brown</p>
-    </div>
-  </div>
-
-  <!-- FAQ Section -->
-  <div class="faq">
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-item">
-      <h4>Q: What sizes do you offer?</h4>
-      <p>A: We offer a wide range of sizes, including W8x36", W8x36", and W8x36" rims.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Q: How do I place an order?</h4>
-      <p>A: Select your desired size, view the rim details, and go to the quote page to order.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Q: Do you offer bulk pricing?</h4>
-      <p>A: Yes, we offer discounts for bulk purchases. Contact us directly for a custom quote.</p>
-    </div>
-  </div>
 
 
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-logo">CHENHUA AUTO</div>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#testimonial">Testimonials</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="floating-contact-bar">
+  <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="contact-btn whatsapp" title="WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+  <a href="mailto:sales@chenhuaauto.com" class="contact-btn email" title="Email">
+    <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email">
+  </a>
+  <a href="tel:+234XXXXXXXXXX" class="contact-btn phone" title="Call">
+    <img src="https://img.icons8.com/color/48/000000/phone.png" alt="Phone">
+  </a>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="testimonials">
+    <h2 class="c2">What Our Customers Say</h2>
+    <hr class="separator" />
+    <div class="testimonial-wrapper">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=1" alt="Daniel Kingston" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Daniel Kingston</p>
+            <p class="testimonial-role">Software Developer, CHENHUA AUTO</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“From product durability to customer service, the experience was outstanding. We
+          were impressed with the speed and the communication!”</p>
       </div>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=2" alt="Sarah Lawson" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Sarah Lawson</p>
+            <p class="testimonial-role">Manager, TractorBase Inc.</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Kari and the team helped us get exactly what we needed. The rims are solid and
+          delivery was on point.”</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=3" alt="Mark Taylor" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Mark Taylor</p>
+            <p class="testimonial-role">Operations Head, AgriTech Ltd</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Professional support, quality rims, and fast responses. Will surely continue
+          working with CHENHUA AUTO.”</p>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <img src="https://i.pravatar.cc/60?img=4" alt="Linda West" class="testimonial-img" />
+          <div class="testimonial-info">
+            <p class="testimonial-name">Linda West</p>
+            <p class="testimonial-role">CEO, GreenMachines Co.</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Every order is delivered with care and precision. Their support team is always
+          available, and that builds trust.”</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & About -->
+      <div class="footer-section footer-logo">
+        <img src="images/agric 3.jpg" alt="CHENHUA AUTO Logo" />
+
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h4 data-i18n="quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+          <!-- <li><a href="#">FAQs</a></li> -->
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4 data-i18n="contact">Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Dongying, China</li>
+          <li><i class="fas fa-phone-alt"></i> +861 8678 641833</li>
+          <li><i class="fas fa-envelope"></i> suckycui@chenhuaauto.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-section">
+        <h4 data-i18n="follow_us">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
       </div>
     </div>
+
+    <!-- Bottom Legal Bar -->
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> CHENHUA AUTO. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-      </div>
+      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="privacy.html" data-i18n="privacy_policy">Privacy Policy</a> | <a
+          href="terms.html" data-i18n="terms_of_service">Terms of
+          Service</a></p>
     </div>
   </footer>
-
-
-
-  <script src="script.js" defer></script>
-  <script src="products.js" defer></script>
-
-</body>
-
-</html>
