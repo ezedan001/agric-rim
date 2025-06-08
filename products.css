@@ -675,7 +675,7 @@ body.dark-mode .footer {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .product-card {
     padding: 16px;
   }
@@ -695,9 +695,9 @@ body.dark-mode .footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .product-grid {
-    padding: 30px 50px;
+    padding: 30px 30px;
     gap: 16px;
   }
 
