@@ -1,88 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terms of Service for CHENHUA AUTO website." />
-  <title>Terms of Service | CHENHUA AUTO</title>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CHENHUA AUTO | Premium Agricultural & Truck Rims</title>
+  <meta name="description"
+    content="CHENHUA AUTO supplies high-performance agricultural and truck rims globally. Built for durability, quality, and global reliability.">
+  <meta name="keywords" content="agricultural rims, tractor rims, truck rims, heavy-duty wheels, chenhua auto">
+  <meta name="author" content="CHENHUA AUTO Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chenhuaauto.com/">
+
+  <!-- Open Graph / Facebook Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CHENHUA AUTO | Premium Rims for Agriculture & Transport">
+  <meta property="og:description" content="Durable, tested, and trusted agricultural and truck rims shipped worldwide.">
+  <meta property="og:image" content="https://www.chenhuaauto.com/images/og-image.jpg">
+  <meta property="og:url" content="https://www.chenhuaauto.com/">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CHENHUA AUTO">
+  <meta name="twitter:description" content="Rims you can trust for agriculture and trucking industries.">
+  <meta name="twitter:image" content="https://www.chenhuaauto.com/images/twitter-card.jpg">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Theme and PWA -->
+  <meta name="theme-color" content="#ff6600">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CHENHUA AUTO",
+    "url": "https://www.chenhuaauto.com",
+    "logo": "https://www.chenhuaauto.com/logo.png",
+    "description": "Global supplier of agricultural and truck rims",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-000-000-0000",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="terms.css">
+  <!-- FontAwesome CDN (add in <head>) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
 </head>
+
+
 <body>
-  <header>
-    <nav>
+
+
+
+
+  <header class="container">
+
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Homepage">CHENHUA AUTO</a>
+
+    <!-- Main Navigation (Desktop) -->
+    <nav class="main-nav" aria-label="Primary Navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="terms.html" aria-current="page">Terms of Service</a></li>
       </ul>
     </nav>
+
+    <!-- Right Side Controls Desktop -->
+    <div class="header-controls">
+      <!-- Language Selector -->
+      <select aria-label="Select Language" class="language-select">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+      </select>
+
+      <!-- Search Bar Desktop -->
+      <div class="search-container desktop-search">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <button aria-label="Search">🔍</button>
+      </div>
+
+      <!-- Cart Button Desktop -->
+      <button class="cart-btn" aria-label="View Cart">🛒</button>
+
+      <!-- Dark/Light Mode Toggle Desktop -->
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+
+      <!-- Hamburger for Mobile -->
+      <button class="hamburger-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileMenu">
+        &#9776;
+      </button>
+
   </header>
 
-  <main>
-    <section>
+  <!-- Mobile Menu Panel -->
+  <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" role="menu">
+    <button id="closeMobileMenu" aria-label="Close Menu" class="close-btn">&times;</button>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" role="menuitem">Home</a></li>
+      <li><a href="products.html" role="menuitem">Products</a></li>
+      <li><a href="about.html" role="menuitem">About</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+    </ul>
+
+    <select aria-label="Select Language" class="mobile-language-select">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <div class="mobile-search-container" role="search">
+      <input type="search" placeholder="Search..." aria-label="Search" />
+      <button aria-label="Search">🔍</button>
+    </div>
+
+    <button class="mobile-cart-btn" aria-label="View Cart">🛒 Cart</button>
+
+
+    <!-- Inside mobile menu -->
+    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌙 Toggle
+      Theme</button>
+
+
+    <script src="terms.js"></script>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="terms-title-section">
+    <div class="containe">
       <h1>Terms of Service</h1>
-      <p><strong>Last Updated:</strong> January 1, 2025</p>
-    </section>
+      <p class="subtitle">Last updated: June 4, 2025 <span id="last-updated-date"></span></p>
+    </div>
+  </section>
 
-    <section>
-      <h2>1. Agreement to Terms</h2>
-      <p>By accessing this website, you agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use our website.</p>
-    </section>
 
-    <section>
-      <h2>2. Modifications</h2>
-      <p>We reserve the right to update or modify these Terms at any time. Changes will be effective upon posting on this page.</p>
-    </section>
 
-    <section>
-      <h2>3. Use of Site</h2>
-      <p>You may use the site only for lawful purposes and in accordance with these Terms. You agree not to misuse, duplicate, or interfere with the content.</p>
-    </section>
 
-    <section>
-      <h2>4. Product Information</h2>
-      <p>All product descriptions and prices are subject to change without notice. We do our best to keep information accurate, but cannot guarantee full correctness.</p>
-    </section>
 
-    <section>
-      <h2>5. Intellectual Property</h2>
-      <p>All content on this site—including logos, images, text, and videos—is the property of CHENHUA AUTO and protected by copyright laws.</p>
-    </section>
 
-    <section>
-      <h2>6. Limitation of Liability</h2>
-      <p>CHENHUA AUTO is not liable for any damages that may result from the use of this website, including indirect or incidental damages.</p>
-    </section>
 
-    <section>
-      <h2>7. Third-Party Links</h2>
-      <p>We are not responsible for any third-party websites or services linked to from our site.</p>
-    </section>
 
-    <section>
-      <h2>8. Termination</h2>
-      <p>We may suspend or terminate access to our site or services at any time without prior notice or liability.</p>
-    </section>
+  <section class="tos-introduction">
+    <div class="containe">
+      <h2>Introduction</h2>
+      <p>
+        This Terms of Service agreement outlines the rules and guidelines for using the website, products, and services
+        provided by <strong>CHENHUA AUTO</strong>.
+      </p>
+      <p>
+        By accessing or using our platform, you agree to be bound by these terms. These terms are designed to ensure a
+        clear, secure, and respectful experience for all users of <strong>CHENHUA AUTO</strong>.
+      </p>
+    </div>
+  </section>
 
-    <section>
-        <h2>9. Governing Law</h2>
-        <p>These Terms are governed by the laws of the People's Republic of China. Any disputes will be resolved under Chinese jurisdiction.</p>
-      </section>      
 
-    <section>
-      <h2>10. Contact Us</h2>
-      <p>If you have questions about these Terms, please contact us at: <a href="mailto:info@chenhuaauto.com">info@chenhuaauto.com</a></p>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 CHENHUA AUTO. All rights reserved.</p>
-    <nav>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html" aria-current="page">Terms of Service</a>
-    </nav>
+
+
+
+
+
+  <section class="tos-user-responsibilities">
+    <div class="containe">
+      <h2>User Responsibilities</h2>
+      <p>
+        As a user of <strong>CHENHUA AUTO</strong>, you agree to the following responsibilities while using our website,
+        products, and services:
+      </p>
+      <ul>
+        <li>Use the website and services in compliance with all applicable laws and regulations.</li>
+        <li>Provide accurate, honest, and complete information when submitting product inquiries and using contact
+          forms.</li>
+        <li>Do not engage in fraudulent or malicious activities that could harm the website, its services, or its users.
+        </li>
+        <li>Respect the privacy and confidentiality of other users and their information.</li>
+        <li>Abide by any other guidelines and policies set forth by <strong>CHENHUA AUTO</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="tos-orders-communication">
+    <div class="containe">
+      <h2>Orders and Communication</h2>
+      <p>
+        At <strong>CHENHUA AUTO</strong>, all product inquiries and orders are handled manually through direct
+        communication channels such as WhatsApp, email, or phone. We do not support instant online purchasing on our
+        website.
+      </p>
+      <ul>
+        <li>Customers are required to initiate product inquiries through the provided contact forms, email (<a
+            href="mailto:support@chenhuaauto.com">support@chenhuaauto.com</a>), or WhatsApp.</li>
+        <li>All orders are processed manually after detailed communication with our team regarding pricing,
+          specifications, and delivery terms.</li>
+        <li>We aim to respond to all inquiries as quickly as possible, typically within 24–48 hours.</li>
+        <li>Quotes, invoices, and further transaction details are shared directly after mutual agreement.</li>
+      </ul>
+      <p>
+        By using our website and contacting us, you acknowledge that the purchase process involves direct communication
+        and agreement, not instant checkout or automatic payments.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="tos-intellectual-property">
+    <div class="containe">
+      <h2>Intellectual Property</h2>
+      <p>
+        All content displayed on this website, including but not limited to logos, product images, graphics, text,
+        layout, and design elements, are the exclusive property of <strong>CHENHUA AUTO</strong>.
+      </p>
+      <ul>
+        <li>Unauthorized use, reproduction, or distribution of any content without prior written permission is strictly
+          prohibited.</li>
+        <li>All trademarks, service marks, and logos used on the website are owned by or licensed to CHENHUA AUTO and
+          are protected by applicable intellectual property laws.</li>
+        <li>Users may not copy, reuse, or modify any material from the website for commercial or public purposes without
+          our explicit consent.</li>
+      </ul>
+      <p>
+        We reserve all rights not expressly granted in and to the website and its content.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="tos-limitation-liability">
+    <div class="containe">
+      <h2>Limitation of Liability</h2>
+      <p>
+        CHENHUA AUTO is not liable for any direct, indirect, incidental, or consequential damages resulting from:
+      </p>
+      <ul>
+        <li>Delays or failures in delivery caused by third-party logistics providers.</li>
+        <li>Errors or miscommunications originating from third-party services or platforms.</li>
+        <li>Temporary website outages or access issues.</li>
+      </ul>
+      <p>
+        While we strive to provide accurate information and timely responses, CHENHUA AUTO does not guarantee
+        uninterrupted access to the website or error-free communication at all times.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="tos-changes">
+    <div class="containe">
+      <h2>Changes to Terms</h2>
+      <p>
+        We may update these Terms of Service at any time to reflect changes in our business, legal requirements, or for
+        other reasons. Any modifications will be effective immediately upon posting on this page.
+      </p>
+      <p>
+        By continuing to use the CHENHUA AUTO website after any changes are made, you agree to be bound by the updated
+        terms. We encourage you to review this page periodically to stay informed of any updates.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="contact-info">
+    <p id="greeting"></p>
+    <p id="suggestion"></p>
+    <p id="country"></p>
+
+    <h3>📞 Contact Info Section</h3>
+    <p>If you have questions about these terms, contact us at:</p>
+
+    <ul>
+      <li>📧 Email: <a id="emailLink" href="#" target="_blank">support@chenhuaauto.com</a></li>
+      <li>📞 WhatsApp: <a id="whatsappLink" href="#" target="_blank">Message Us</a></li>
+      <li>🔗 <a href="contact.html">Visit our Contact Page</a></li>
+    </ul>
+  </section>
+    <script>
+      // Time-based greeting
+      function getGreeting() {
+        const hour = new Date().getHours();
+        if (hour < 12) return "Good morning 🌅";
+        if (hour < 18) return "Good afternoon ☀️";
+        return "Good evening 🌙";
+      }
+
+      // Random suggestions
+      const suggestions = [
+        "How can we assist you today?",
+        "Feel free to ask about pricing or availability.",
+        "Need help with product specs?",
+        "Let us know your delivery location or rim size."
+      ];
+
+      // Set greeting and suggestion
+      document.getElementById("greeting").textContent = getGreeting();
+      document.getElementById("suggestion").textContent =
+        suggestions[Math.floor(Math.random() * suggestions.length)];
+
+      // Fetch visitor's country
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("country").textContent =
+            `🌍 Detected Location: ${data.country_name}`;
+        })
+        .catch(() => {
+          document.getElementById("country").textContent = "🌍 Location: Unknown";
+        });
+
+      // Prefilled WhatsApp and Gmail
+      const whatsappMessage = encodeURIComponent(
+        `Hello CHENHUA AUTO Team,%0A%0ABefore we continue, please help us with the following details:%0A🔹 Full Name:%0A🔹 Company Name:%0A🔹 Phone Number:%0A%0AOur team will reply as soon as possible.`
+      );
+      const emailSubject = encodeURIComponent("Inquiry from CHENHUA AUTO Website");
+      const emailBody = encodeURIComponent(
+        `Hello Team,%0A%0ABefore we continue, please help us with the following details:%0A🔹 Full Name:%0A🔹 Company Name:%0A🔹 Phone Number:%0A%0AThanks!`
+      );
+
+      // Update contact links
+      document.getElementById("whatsappLink").href = `https://wa.me/2348135584643?text=${whatsappMessage}`;
+   document.getElementById("emailLink").href = 
+  `https://mail.google.com/mail/?view=cm&fs=1&to=ezesomtochukwu588@gmail.com&su=${emailSubject}&body=${emailBody}`;
+
+   </script>
+
+
+
+
+
+
+
+
+<section class="cta-footer-bar">
+  <div class="cta-content">
+    <p>🚀 Want to work with <strong>CHENHUA AUTO</strong>? Let’s get started.</p>
+    <a href="contact.html" class="cta-button">Contact Us</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & About -->
+      <div class="footer-section footer-logo">
+        <img src="images/agric 3.jpg" alt="CHENHUA AUTO Logo" />
+
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h4 data-i18n="quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+          <!-- <li><a href="#">FAQs</a></li> -->
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4 data-i18n="contact">Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Dongying, China</li>
+          <li><i class="fas fa-phone-alt"></i> +861 8678 641833</li>
+          <li><i class="fas fa-envelope"></i> suckycui@chenhuaauto.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-section">
+        <h4 data-i18n="follow_us">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="privacy.html" data-i18n="privacy_policy">Privacy Policy</a> | <a
+          href="terms.html" data-i18n="terms_of_service">Terms of
+          Service</a></p>
+    </div>
   </footer>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
