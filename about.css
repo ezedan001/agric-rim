@@ -1166,7 +1166,8 @@ body.dark-mode .foote {
 }
 
 .brand-certifications h2 {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: bolder;
   margin-bottom: 40px;
   color: #222;
 }
@@ -1628,7 +1629,7 @@ body.dark-mode .foote {
   background: #1a1a1a;
   color: #fff;
   margin: 5% auto;
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 20px;
   width: 90%;
   max-width: 500px;
@@ -1696,13 +1697,13 @@ body.dark-mode .foote {
 
 /* Buttons */
 .button {
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem .9rem;
   font-size: 1rem;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   margin-right: 0.7rem;
-  margin-top: 1.2rem;
+  margin-top: 0.2rem;
   transition: background 0.3s, transform 0.2s;
 }
 
@@ -1731,7 +1732,7 @@ body.dark-mode .foote {
 /* Responsive Tweaks */
 @media (max-width: 480px) {
   .modal-content {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 }
 
