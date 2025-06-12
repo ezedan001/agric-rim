@@ -89,9 +89,31 @@ body.dark-mode .mobile-search button:hover {
   background-color: #e68a00;
 }
 
+body.dark-mode .filter-section {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode .filter-section {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode #filter-size,
+body.dark-mode #filter-type {
+  background-color: #222;
+  color: #eee;
+}
+
+
+
+body.dark-mode .product-grid {
+  background-color: #222;
+  color: white;
+}
 
 body.dark-mode .product-card {
-  background-color: #fffcfc10;
+  background-color: #fcf9f90c;
   color: white;
 }
 
@@ -110,7 +132,7 @@ body.dard-mode .featured-text {
 }
 
 body.dark-mode .separator {
-  background-color: #3d3c3c;
+  background-color: orange;
   color: #666;
 }
 
@@ -124,27 +146,45 @@ body.dark-mode .testimonial-name {
 }
 
 
-body.dark-mode .testimonial-item {
-  background-color: #fffcfc10;
+body.dark-mode .testimonial {
+  background-color: #222;
 }
 
-body.dark-mode .faq-section {
-  background-color: #fffcfc10;
-}
 
-body.dark-mode .faq-section {
-  background-color: #fffcfc10;
-  color: #aaa;
-}
-
-body.dark-mode .faq-answer {
-  background-color: #3d3c3c;
+body.dark-mode .c2 {
   color: #eee;
 }
+
+body.dark-mode .cta-banner{
+   background-color: #1e1e1e;
+  border-bottom-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .span{
+   background-color: #1e1e1e;
+  color: #eee;
+}
+
+
+body.dark-mode .cons{
+   background-color: #1e1e1e;
+  color: #eee;
+}
+
 
 body.dark-mode .footer {
   background-color: #1e1e1e;
   border-bottom-color: #333;
+  color: #eee;
+}
+
+
+
+
+body.dark-mode .foote {
+  background-color: #1e1e1e;
+   border-bottom-color: #333;
   color: #eee;
 }
 
@@ -477,7 +517,7 @@ body.dark-mode .footer {
 
 
 .hero-section {
-  background-image: url('images/CENH\ 1.jpg'); /* You can replace with your own image URL */
+  background-image: url('images/product.png'); /* You can replace with your own image URL */
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -724,54 +764,6 @@ body.dark-mode .footer {
 
 
 
-.floating-contact-bar {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-btn {
-  background: #fff;
-  border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.contact-btn:hover {
-  transform: scale(1.1);
-}
-
-.contact-btn img {
-  width: 28px;
-  height: 28px;
-}
-@media (max-width: 600px) {
-  .floating-contact-bar {
-    bottom: 16px;
-    right: 16px;
-    gap: 10px;
-  }
-
-  .contact-btn {
-    width: 48px;
-    height: 48px;
-  }
-
-  .contact-btn img {
-    width: 24px;
-    height: 24px;
-  }
-}
-
 
 
 
@@ -789,7 +781,7 @@ body.dark-mode .footer {
 
 
 .testimonials {
-  background: #0d0d0d;
+  /* background: #0d0d0d; */
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -797,7 +789,7 @@ body.dark-mode .footer {
 
 .testimonials h2 {
   font-size: 2.2rem;
-  color: #f4f4f4;
+  color: black;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -937,11 +929,125 @@ body.dark-mode .footer {
 
 
 
+/* CTA Banner Section */
+.cta-banner {
+  /* background: linear-gradient(to right, #0a0a0a, #1a1a1a); */
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  border-top: 4px solid orange;
+  /* border-bottom: 4px solid orange; */
+}
+
+.cta-banner .cta-content {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.cta-banner h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cta-banner h2 span {
+  color: black;
+  font-weight: bold;
+}
+
+.cta-banner p {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #e09406;
+  color: #000;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 18px rgba(255, 165, 0, 0.4);
+}
+
+.cta-button:hover {
+  background-color: #fda725;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #dfb15d;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .cta-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-banner p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 60px 15px;
+  }
+
+  .cta-banner h2 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner {
+    padding: 50px 10px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-banner p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .footer {
   background: rgb(255, 255, 255);
-  color: #000000;
+  /* color: #000000; */
   padding: 3rem 1rem 1rem;
   font-family: 'Segoe UI', sans-serif;
   box-shadow: 0 2px 10px rgba(255, 102, 0, 0.4);
@@ -1023,5 +1129,23 @@ body.dark-mode .footer {
   padding-top: 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #000000;
+  /* color: #000000; */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

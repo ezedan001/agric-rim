@@ -201,3 +201,29 @@ CHENHUA AUTO`;
   window.open(gmailURL, '_blank');
 }
 
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('.product-img img');
+
+  images.forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+    });
+
+    // Optional fallback if cached
+    if (img.complete) {
+      img.classList.add('loaded');
+    }
+  });
+});
+
+

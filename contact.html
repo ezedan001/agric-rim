@@ -152,22 +152,57 @@
 
 
 
-  <!-- Contact Page Banner Section -->
+  <!-- CONTACT PAGE BANNER -->
   <section class="contact-banner">
     <div class="banner-overlay">
       <div class="banner-content">
         <h1>Get in Touch</h1>
-        <p class="subtitle">We're here to help — send
-          us a message or find us below.!
-        </p>
+        <!-- <p>Home / Contact</p> -->
       </div>
     </div>
+  </section>
+
+  <!-- INTRO TEXT SECTION -->
+  <section class="contact-intro">
+    <h2>We’d love to hear from you!</h2>
+    <p class="p">Our team is here to assist you with anything you need. Just reach out — we're happy to help!</p>
   </section>
 
 
 
 
-  
+
+  <script>
+    // Smooth fade-in effect when scrolling
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeElems = document.querySelectorAll(".contact-banner, .contact-intro");
+
+      const fadeInOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(fadeInOnScroll, {
+        threshold: 0.1
+      });
+
+      fadeElems.forEach(elem => {
+        observer.observe(elem);
+      });
+
+      // Scroll to intro if linked with #contact
+      if (window.location.hash === "#contact") {
+        const intro = document.querySelector(".contact-intro");
+        if (intro) {
+          intro.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  </script>
 
 
 
@@ -175,58 +210,207 @@
 
 
 
- <!-- CONTACT DETAILS SECTION -->
-  <section class="contact-details">
-    <!-- CONTACT INFO -->
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <p><strong>Company Address:</strong> N0.3 Shengcheng Road, Development Zone, Sishui Country</p>
-      <p><strong>City:</strong> Jining City</p>
-      <p><strong>Province:</strong> Shandong Province</p>
-      <p><strong>Country:</strong> China</p>
-      <p><strong>Email:</strong> <a href="mailto:jinyueauto@gmail.com">jinyueauto@gmail.com</a></p>
-      <p><strong>Tel:</strong> <a href="tel:+865466880070">+86-546-6880070</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/865466880070" target="_blank">+86 546 6880070</a></p>
 
-      <div class="map-buttons">
-        <a class="btn-map" href="https://maps.google.com/?q=Shandong Province+Jining City+N0.3 Shengcheng Road, Development Zone, Sishui Country" target="_blank">Google Maps</a>
-        <a class="btn-map" href="#">WeChat</a>
-        <a class="btn-map" href="#">Apple Maps</a>
-        <a class="btn-map" href="https://wa.me/865466880070" target="_blank">Chat on WhatsApp</a>
+
+
+
+
+
+  <!-- CONTACT DETAILS SECTION -->
+  <!-- Font Awesome CDN (latest) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Left: Contact Form -->
+      <div class="contact-form">
+        <h2>📩 Contact Us</h2>
+        <form action="mailto:18054365167@163.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
-    </div>
 
-    <!-- CONTACT FORM -->
-    <div class="contact-form">
-      <h2>Send a Message</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <!-- Right: Contact Info -->
+      <div class="contact-info">
+        <h2>📞 Contact Information</h2>
+        <ul>
+          <li><strong>Phone:</strong> +86 18054365167</li>
+          <li><strong>WhatsApp:</strong> +86 18054365167</li>
+          <li><strong>Email:</strong> <a href="mailto:18054365167@163.com">18054365167@163.com</a></li>
+          <li><strong>Address:</strong><br>
+            No. 3 Shengcheng Road,<br>
+            Development Zone, Sishui County,<br>
+            Jining City, Shandong Province, China
+          </li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- GOOGLE MAP -->
+  <!-- Google Map Section -->
   <section class="map-section">
-    <h2 style="text-align: center; color: orange;">Our Location</h2>
     <iframe
-      src="https://maps.google.com/maps?q=Shandong%20Dawang%20Dongying%20China&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      src="https://www.google.com/maps?q=No. 3 Shengcheng Road, Sishui County, Jining City, Shandong Province, China&output=embed"
+      loading="lazy" allowfullscreen>
     </iframe>
   </section>
 
-  <!-- SOCIAL FOOTER (Optional) -->
-  <section class="social-media">
-    <h2>Connect With Us</h2>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+
+
+
+
+
+
+
+  <script>
+    const templates = [
+      "I’m interested in your Agricultural Rims. Please send full catalog and pricing.",
+      "Kindly provide specifications and shipping details for your Tractor Rims.",
+      "Please share your best offer for bulk purchase of Agricultural Rims.",
+      "We are ready to order. Send us proforma invoice for available stock.",
+      "I want to confirm the compatibility and size details of your Rims.",
+      "Please send your product catalog and delivery timeline for large orders."
+    ];
+
+    function getTimeGreeting() {
+      const h = new Date().getHours();
+      if (h < 12) return "Good morning";
+      else if (h < 18) return "Good afternoon";
+      else return "Good evening";
+    }
+
+    async function detectCountry() {
+      try {
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        return data.country_name || "your country";
+      } catch {
+        return "your country";
+      }
+    }
+
+    async function sendSmartEmail() {
+      const name = prompt("🔹 Enter Your Full Name:");
+      if (!name) return alert("Full name is required.");
+
+      const company = prompt("🔹 Enter Your Company Name:");
+      if (!company) return alert("Company name is required.");
+
+      const email = prompt("🔹 Enter Your Email Address:");
+      if (!email) return alert("Email is required.");
+
+      const subject = prompt("🔹 Subject of your message:");
+      if (!subject) return alert("Subject is required.");
+
+      const phone = prompt("🔹 Your Phone Number (optional):");
+
+      const greeting = getTimeGreeting();
+      const country = await detectCountry();
+      const template = templates[Math.floor(Math.random() * templates.length)];
+
+      const message = `${greeting},\n\nMy name is ${name} from ${company}, based in ${country}.\n\n${template}\n\n📞 Phone: ${phone || "Not provided"}\n📧 Email: ${email}\n\nLooking forward to your response.\n\nBest regards,\n${name}`;
+
+      const mailtoLink = `mailto:18054365167@163.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+      window.open(mailtoLink, "_blank");
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <section class="faq-section">
+    <h2 class="faq-text" data-i18n="faq">Frequently Asked Questions</h2>
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="return_policy_q">
+          What is your return policy?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" data-i18n="return_policy_a">
+          You can return any item within 30 days of delivery. Please ensure it is unused and in original packaging.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="shipping_q">
+          How long does shipping take?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" data-i18n="shipping_a">
+          Domestic shipping takes 3–5 business days. International orders may take up to 10–15 business days.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="customization_q">
+          Do you offer customization options?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" data-i18n="customization_a">
+          Yes, we offer customization for bulk orders. Please contact our team with your specific requirements.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="tracking_q">
+          How can I track my order?
+          <span class="arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" data-i18n="tracking_a">
+          Once your order is shipped, we will send you a tracking number via email or SMS.
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          item.classList.toggle('active');
+
+          // Optional: close others
+          faqItems.forEach(other => {
+            if (other !== item) {
+              other.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
 
 
   <footer class="footer">
@@ -273,7 +457,7 @@
 
     <!-- Bottom Legal Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+      <p>&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of
           Service</a></p>
     </div>
   </footer>
