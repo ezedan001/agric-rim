@@ -192,28 +192,64 @@
         <img src="images/agric 3.jpg" alt="Product 1" />
         <h3 data-i18n="product_one">Product One</h3>
         <p class="price">$99.99</p>
-        <button class="btn" data-i18n="view_details">View Details</button>
+        <button class="btn view-details" data-url="products.html" data-i18n="view_details">View Details</button>
+        <!-- Do this for each product -->
       </div>
       <div class="product-card">
         <img src="images/agric 2.jpg" alt="Product 2" />
         <h3 data-i18n="product_two">Product Two</h3>
         <p class="price">$149.99</p>
-        <button class="btn" data-i18n="view_details">View Details</button>
+        <button class="btn view-details" data-url="products.html" data-i18n="view_details">View Details</button>
+        <!-- Do this for each product -->
       </div>
       <div class="product-card">
         <img src="images/agric 1.jpg" alt="Product 3" />
         <h3 data-i18n="product_three">Product Three</h3>
         <p class="price">$199.99</p>
-        <button class="btn" data-i18n="view_details">View Details</button>
+        <button class="btn view-details" data-url="products.html" data-i18n="view_details">View Details</button>
+        <!-- Do this for each product -->
       </div>
       <div class="product-card">
         <img src="images/agric 4.jpg" alt="Product 2" />
         <h3 data-i18n="product_two">Product Two</h3>
         <p class="price">$149.99</p>
-        <button class="btn" data-i18n="view_details">View Details</button>
+        <button class="btn view-details" data-url="products.html" data-i18n="view_details">View Details</button>
+        <!-- Do this for each product -->
       </div>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".view-details");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const url = this.getAttribute("data-url");
+          if (url) {
+            window.location.href = url; // Redirect to the product page
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -247,7 +283,7 @@
 
 
   <section class="testimonials">
-    <h2 class="c2">What Our Customers Say</h2>
+    <h2 class="c2" data-i18n="testimonials">What Our Customers Say</h2>
     <hr class="separator" />
     <div class="testimonial-wrapper">
 
@@ -261,7 +297,8 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <p class="testimonial-text">“From product durability to customer service, the experience was outstanding. We
+        <p class="testimonial-text" data-i18n="testimonial_1_text">“From product durability to customer service, the
+          experience was outstanding. We
           were impressed with the speed and the communication!”</p>
       </div>
 
@@ -275,7 +312,8 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <p class="testimonial-text">“Kari and the team helped us get exactly what we needed. The rims are solid and
+        <p class="testimonial-text" data-i18n="testimonial_2_text">“Kari and the team helped us get exactly what we
+          needed. The rims are solid and
           delivery was on point.”</p>
       </div>
 
@@ -289,7 +327,8 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <p class="testimonial-text">“Professional support, quality rims, and fast responses. Will surely continue
+        <p class="testimonial-text" data-i18n="testimonial_3_text">“Professional support, quality rims, and fast
+          responses. Will surely continue
           working with CHENHUA AUTO.”</p>
       </div>
 
@@ -303,7 +342,8 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <p class="testimonial-text">“Every order is delivered with care and precision. Their support team is always
+        <p class="testimonial-text" data-i18n="testimonial_4_text">“Every order is delivered with care and precision.
+          Their support team is always
           available, and that builds trust.”</p>
       </div>
 
@@ -425,8 +465,8 @@
       <div class="footer-section">
         <h4 data-i18n="quick_links">Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="products.html" data-i18n="products">Products</a></li>
           <li><a href="about.html" data-i18n="about_us">About Us</a></li>
           <!-- <li><a href="#">FAQs</a></li> -->
           <li><a href="contact.html" data-i18n="contact">Contact</a></li>
@@ -457,8 +497,8 @@
 
     <!-- Bottom Legal Bar -->
     <div class="footer-bottom">
-      <p class="foote">&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="privacy.html" data-i18n="privacy_policy">Privacy Policy</a> | <a
-          href="terms.html" data-i18n="terms_of_service">Terms of
+      <p class="foote">&copy; 2025 CHENHUA AUTO. All rights reserved. | <a href="privacy.html"
+          data-i18n="privacy_policy">Privacy Policy</a> | <a href="terms.html" data-i18n="terms_of_service">Terms of
           Service</a></p>
     </div>
   </footer>
@@ -673,15 +713,15 @@ Our CHENHUA AUTO team will get back to you shortly. ✅`;
       // Gmail Contact Enhancer Script - Full Powerful Version
 
       // 🌍 Detects customer country using IP
-async function getCustomerLocation() {
-  const res = await fetch('https://ipapi.co/json');
-  return await res.json();
-}
+      async function getCustomerLocation() {
+        const res = await fetch('https://ipapi.co/json');
+        return await res.json();
+      }
 
-// 📧 Auto-open Gmail with pre-filled message (✔️ fixed Gmail link and email)
-function openGmail(name, company, phone, product, country, message) {
-  const subject = encodeURIComponent(`Inquiry from ${company}`);
-  const body = encodeURIComponent(`Hello CHENHUA AUTO Team 👋,
+      // 📧 Auto-open Gmail with pre-filled message (✔️ fixed Gmail link and email)
+      function openGmail(name, company, phone, product, country, message) {
+        const subject = encodeURIComponent(`Inquiry from ${company}`);
+        const body = encodeURIComponent(`Hello CHENHUA AUTO Team 👋,
 
 ${message}
 
@@ -696,85 +736,85 @@ ${message}
 Best regards,
 ${name}`);
 
-  // ✔️ This link works on all devices with Gmail app or browser
-  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=ezesomtochukwu588@gmail.com&su=${subject}&body=${body}`, '_blank');
-}
+        // ✔️ This link works on all devices with Gmail app or browser
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=ezesomtochukwu588@gmail.com&su=${subject}&body=${body}`, '_blank');
+      }
 
-// ✅ Suggest random product
-function getRandomProduct() {
-  const products = [
-    'Agricultural Rim',
-    'Truck Tire',
-    'Tractor Rim',
-    'Wheel Hub',
-    'Farm Trailer Rim',
-    'Heavy Duty Truck Tire',
-    'Combine Harvester Rim',
-    'Industrial Equipment Rim'
-  ];
-  return products[Math.floor(Math.random() * products.length)];
-}
+      // ✅ Suggest random product
+      function getRandomProduct() {
+        const products = [
+          'Agricultural Rim',
+          'Truck Tire',
+          'Tractor Rim',
+          'Wheel Hub',
+          'Farm Trailer Rim',
+          'Heavy Duty Truck Tire',
+          'Combine Harvester Rim',
+          'Industrial Equipment Rim'
+        ];
+        return products[Math.floor(Math.random() * products.length)];
+      }
 
-// 💬 Generate professional message templates
-function generateMessages(name, product) {
-  return [
-    `I am interested in your premium ${product}. Please send full specifications and pricing. 🔍`,
-    `Can you provide a detailed catalog for ${product}? I am sourcing for our upcoming procurement. 📘`,
-    `Hello, I represent a company seeking bulk purchase of ${product}. Kindly share your best price and lead time. 📦`,
-    `Good day! We found your ${product} on your website. Could you send us your full product line and MOQ? 🌟`,
-    `We are currently expanding our operations and looking for a reliable supplier for ${product}. Please send full quotation and export terms. 💼`,
-    `This is ${name} from a company dealing in vehicle parts. We’re looking into sourcing ${product}. Please advise availability, payment, and shipping options. ✍️`,
-    `Our company is building long-term partnerships in your sector. Interested in ${product}, kindly provide full specs, certifications, and quality assurance details. 📄`,
-    `Dear Sales Team, we plan to import a large quantity of ${product} this quarter. Please provide your latest catalog, price list, and cooperation terms. 📊`
-  ];
-}
+      // 💬 Generate professional message templates
+      function generateMessages(name, product) {
+        return [
+          `I am interested in your premium ${product}. Please send full specifications and pricing. 🔍`,
+          `Can you provide a detailed catalog for ${product}? I am sourcing for our upcoming procurement. 📘`,
+          `Hello, I represent a company seeking bulk purchase of ${product}. Kindly share your best price and lead time. 📦`,
+          `Good day! We found your ${product} on your website. Could you send us your full product line and MOQ? 🌟`,
+          `We are currently expanding our operations and looking for a reliable supplier for ${product}. Please send full quotation and export terms. 💼`,
+          `This is ${name} from a company dealing in vehicle parts. We’re looking into sourcing ${product}. Please advise availability, payment, and shipping options. ✍️`,
+          `Our company is building long-term partnerships in your sector. Interested in ${product}, kindly provide full specs, certifications, and quality assurance details. 📄`,
+          `Dear Sales Team, we plan to import a large quantity of ${product} this quarter. Please provide your latest catalog, price list, and cooperation terms. 📊`
+        ];
+      }
 
-// 🚨 Vibrate when modal opens
-function vibrateAlert() {
-  if (navigator.vibrate) navigator.vibrate(200);
-}
+      // 🚨 Vibrate when modal opens
+      function vibrateAlert() {
+        if (navigator.vibrate) navigator.vibrate(200);
+      }
 
-// 📱 Time-based greeting
-function getGreeting() {
-  const hour = new Date().getHours();
-  if (hour < 12) return 'Good morning';
-  else if (hour < 18) return 'Good afternoon';
-  else return 'Good evening';
-}
+      // 📱 Time-based greeting
+      function getGreeting() {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'Good morning';
+        else if (hour < 18) return 'Good afternoon';
+        else return 'Good evening';
+      }
 
-// 🌍 Main contact form handler
-async function handleGmailFormSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const company = document.getElementById('company').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const product = document.getElementById('product').value.trim() || getRandomProduct();
+      // 🌍 Main contact form handler
+      async function handleGmailFormSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const company = document.getElementById('company').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const product = document.getElementById('product').value.trim() || getRandomProduct();
 
-  const locationData = await getCustomerLocation();
-  const country = locationData.country_name || 'Unknown';
+        const locationData = await getCustomerLocation();
+        const country = locationData.country_name || 'Unknown';
 
-  const messages = generateMessages(name, product);
-  const greeting = getGreeting();
-  const selectedMessage = `${greeting} 👋,\n\n${messages[Math.floor(Math.random() * messages.length)]}`;
+        const messages = generateMessages(name, product);
+        const greeting = getGreeting();
+        const selectedMessage = `${greeting} 👋,\n\n${messages[Math.floor(Math.random() * messages.length)]}`;
 
-  openGmail(name, company, phone, product, country, selectedMessage);
-}
+        openGmail(name, company, phone, product, country, selectedMessage);
+      }
 
-// 📬 Modal control
-function openGmailModal() {
-  document.getElementById('gmailModal').style.display = 'block';
-  vibrateAlert();
-}
+      // 📬 Modal control
+      function openGmailModal() {
+        document.getElementById('gmailModal').style.display = 'block';
+        vibrateAlert();
+      }
 
-function closeGmailModal() {
-  document.getElementById('gmailModal').style.display = 'none';
-}
+      function closeGmailModal() {
+        document.getElementById('gmailModal').style.display = 'none';
+      }
 
-// 📞 Add event listener on page load
-window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('gmailForm').addEventListener('submit', handleGmailFormSubmit);
-});
+      // 📞 Add event listener on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('gmailForm').addEventListener('submit', handleGmailFormSubmit);
+      });
 
 
 
@@ -908,9 +948,10 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           fast_delivery: "Fast Delivery",
           customization: "Customization",
           testimonials: "What our customer say",
-          testimonial_1: "“Excellent service and amazing product quality!”",
-          testimonial_2: "“Fast delivery and great customer support.”",
-          testimonial_3: "“Highly recommend for their professionalism and quality.”",
+          testimonial_1_text: "From product durability to customer service, the experience was outstanding. We were impressed with the speed and the communication!",
+          testimonial_2_text: "Kari and the team helped us get exactly what we needed. The rims are solid and delivery was on point.",
+          testimonial_3_text: "Professional support, quality rims, and fast responses. Will surely continue working with CHENHUA AUTO.",
+          testimonial_4_text: "Every order is delivered with care and precision. Their support team is always available, and that builds trust.",
           faq: "Frequently Asked Questions",
           return_policy_q: "What is your return policy?",
           return_policy_a: "You can return any item within 30 days of delivery. Please ensure it is unused and in original packaging.",
@@ -941,9 +982,9 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           contact: "Contact",
           main_intro: "Bienvenue chez CHENHUA AUTO",
           sub_intro: "Votre partenaire de confiance pour les jantes et roues agricoles",
-          explore_products: "Découvrir les produits",
-          scroll_down: "↓ Faites défiler",
-          featured_products: "Produits phares",
+          explore_products: "Explorer les produits",
+          scroll_down: "↓ Faire défiler",
+          featured_products: "Produits en vedette",
           product_one: "Produit Un",
           product_two: "Produit Deux",
           product_three: "Produit Trois",
@@ -955,78 +996,81 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           fast_delivery: "Livraison rapide",
           customization: "Personnalisation",
           testimonials: "Ce que disent nos clients",
-          testimonial_1: "« Service excellent et qualité de produit incroyable ! »",
-          testimonial_2: "« Livraison rapide et excellent support client. »",
-          testimonial_3: "« Je recommande vivement pour leur professionnalisme et leur qualité. »",
-          faq: "Questions fréquentes",
+          testimonial_1_text: "De la durabilité du produit au service client, l'expérience était exceptionnelle. Nous avons été impressionnés par la rapidité et la communication !",
+          testimonial_2_text: "Kari et l'équipe nous ont aidés à obtenir exactement ce dont nous avions besoin. Les jantes sont solides et la livraison était parfaite.",
+          testimonial_3_text: "Support professionnel, jantes de qualité et réponses rapides. Nous continuerons certainement à travailler avec CHENHUA AUTO.",
+          testimonial_4_text: "Chaque commande est livrée avec soin et précision. Leur équipe de support est toujours disponible, ce qui inspire confiance.",
+          faq: "Foire aux questions",
           return_policy_q: "Quelle est votre politique de retour ?",
-          return_policy_a: "Vous pouvez retourner tout article dans les 30 jours suivant la livraison. Veuillez vous assurer qu’il n’a pas été utilisé et qu’il est dans son emballage d’origine.",
+          return_policy_a: "Vous pouvez retourner tout article dans les 30 jours suivant la livraison. Veuillez vous assurer qu’il est inutilisé et dans son emballage d’origine.",
           shipping_q: "Combien de temps prend la livraison ?",
           shipping_a: "La livraison nationale prend 3 à 5 jours ouvrables. Les commandes internationales peuvent prendre jusqu'à 10 à 15 jours ouvrables.",
-          customization_q: "Offrez-vous des options de personnalisation ?",
-          customization_a: "Oui, nous offrons des personnalisations pour les commandes en gros. Veuillez contacter notre équipe avec vos exigences spécifiques.",
+          customization_q: "Proposez-vous des options de personnalisation ?",
+          customization_a: "Oui, nous offrons la personnalisation pour les commandes en gros. Veuillez contacter notre équipe avec vos exigences spécifiques.",
           tracking_q: "Comment puis-je suivre ma commande ?",
-          tracking_a: "Une fois votre commande expédiée, nous vous enverrons un numéro de suivi par e-mail ou SMS.",
+          tracking_a: "Une fois votre commande expédiée, nous vous enverrons un numéro de suivi par email ou SMS.",
           quick_links: "Liens rapides",
           about_us: "À propos de nous",
           contact: "Contact",
           follow_us: "Suivez-nous",
           privacy_policy: "Politique de confidentialité",
-          terms_of_service: "Conditions d’utilisation",
+          terms_of_service: "Conditions d'utilisation",
           contact_us: "Contacter CHENHUA AUTO",
           full_name: "Nom complet",
-          company_name: "Nom de la société",
+          company_name: "Nom de l’entreprise",
           phone_number: "Numéro de téléphone",
           whatsapp: "WhatsApp",
           wechat: "WeChat",
           toggle_theme: "Changer de thème"
         },
+
         ar: {
-          home: "الرئيسية",
+          home: "الصفحة الرئيسية",
           products: "المنتجات",
           about: "من نحن",
           contact: "اتصل بنا",
           main_intro: "مرحبًا بكم في CHENHUA AUTO",
-          sub_intro: "شريكك الموثوق في الجنوط والإطارات الزراعية",
+          sub_intro: "شريكك الموثوق في جنوط وإطارات المعدات الزراعية",
           explore_products: "استكشاف المنتجات",
-          scroll_down: "↓ مرر لأسفل",
+          scroll_down: "↓ مرر للأسفل",
           featured_products: "المنتجات المميزة",
           product_one: "المنتج الأول",
           product_two: "المنتج الثاني",
           product_three: "المنتج الثالث",
           price: "السعر",
           view_details: "عرض التفاصيل",
-          why_choose_us: "لماذا نحن؟",
+          why_choose_us: "لماذا تختارنا",
           durability: "المتانة",
           wide_range: "مجموعة واسعة",
           fast_delivery: "توصيل سريع",
           customization: "تخصيص",
           testimonials: "ماذا يقول عملاؤنا",
-          testimonial_1: "“خدمة ممتازة وجودة منتجات رائعة!”",
-          testimonial_2: "“توصيل سريع ودعم عملاء ممتاز.”",
-          testimonial_3: "“أنصح بهم بشدة لمهنيتهم وجودتهم.”",
-          faq: "الأسئلة الشائعة",
+          testimonial_1_text: "من متانة المنتج إلى خدمة العملاء، كانت التجربة ممتازة. لقد أُعجبنا بالسرعة والتواصل!",
+          testimonial_2_text: "ساعدتنا كاري والفريق في الحصول على ما نحتاجه بالضبط. الجنوط متينة والتوصيل كان في الموعد.",
+          testimonial_3_text: "دعم احترافي، جنوط عالية الجودة، واستجابات سريعة. سنستمر بالتأكيد في العمل مع CHENHUA AUTO.",
+          testimonial_4_text: "كل طلب يتم توصيله بعناية ودقة. فريق الدعم لديهم متواجد دائمًا، وهذا يبني الثقة.",
+          faq: "الأسئلة المتكررة",
           return_policy_q: "ما هي سياسة الإرجاع الخاصة بكم؟",
-          return_policy_a: "يمكنك إرجاع أي عنصر خلال 30 يومًا من الاستلام بشرط ألا يكون مستخدمًا وفي عبوته الأصلية.",
-          shipping_q: "كم تستغرق مدة الشحن؟",
-          shipping_a: "يستغرق الشحن المحلي 3-5 أيام عمل. وقد يستغرق الشحن الدولي من 10 إلى 15 يومًا.",
+          return_policy_a: "يمكنك إرجاع أي منتج خلال 30 يومًا من الاستلام، بشرط أن يكون غير مستخدم وفي عبوته الأصلية.",
+          shipping_q: "كم يستغرق الشحن؟",
+          shipping_a: "الشحن المحلي يستغرق من 3 إلى 5 أيام عمل. أما الطلبات الدولية فقد تستغرق من 10 إلى 15 يوم عمل.",
           customization_q: "هل تقدمون خيارات التخصيص؟",
-          customization_a: "نعم، نحن نقدم التخصيص للطلبات الكبيرة. يرجى الاتصال بفريقنا لمتطلباتك المحددة.",
+          customization_a: "نعم، نقدم خيارات التخصيص للطلبات الكبيرة. يرجى التواصل مع فريقنا لتقديم متطلباتك.",
           tracking_q: "كيف يمكنني تتبع طلبي؟",
-          tracking_a: "بمجرد شحن طلبك، سنرسل لك رقم تتبع عبر البريد الإلكتروني أو الرسائل القصيرة.",
+          tracking_a: "بمجرد شحن طلبك، سنرسل لك رقم تتبع عبر البريد الإلكتروني أو الرسائل النصية.",
           quick_links: "روابط سريعة",
           about_us: "معلومات عنا",
-          contact: "تواصل معنا",
+          contact: "اتصل بنا",
           follow_us: "تابعنا",
           privacy_policy: "سياسة الخصوصية",
           terms_of_service: "شروط الخدمة",
-          contact_us: "اتصل بـ CHENHUA AUTO",
+          contact_us: "تواصل مع CHENHUA AUTO",
           full_name: "الاسم الكامل",
           company_name: "اسم الشركة",
           phone_number: "رقم الهاتف",
           whatsapp: "واتساب",
           wechat: "وي شات",
-          toggle_theme: "تبديل الوضع"
+          toggle_theme: "تبديل النمط"
         },
 
         zh: {
@@ -1034,9 +1078,9 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           products: "产品",
           about: "关于我们",
           contact: "联系我们",
-          main_intro: "欢迎来到CHENHUA AUTO",
-          sub_intro: "您值得信赖的农业轮辋与轮胎合作伙伴",
-          explore_products: "查看产品",
+          main_intro: "欢迎来到 CHENHUA AUTO",
+          sub_intro: "您在农业轮辋与车轮方面值得信赖的合作伙伴",
+          explore_products: "探索产品",
           scroll_down: "↓ 向下滚动",
           featured_products: "精选产品",
           product_one: "产品一",
@@ -1046,36 +1090,38 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           view_details: "查看详情",
           why_choose_us: "为什么选择我们",
           durability: "耐用性",
-          wide_range: "产品种类广泛",
-          fast_delivery: "快速交付",
+          wide_range: "种类齐全",
+          fast_delivery: "快速发货",
           customization: "个性化定制",
           testimonials: "客户评价",
-          testimonial_1: "“服务非常好，产品质量也很棒！”",
-          testimonial_2: "“交货迅速，客服很棒。”",
-          testimonial_3: "“非常专业，质量值得信赖，强烈推荐。”",
+          testimonial_1_text: "从产品耐用性到客户服务，体验非常出色。我们对响应速度和沟通印象深刻！",
+          testimonial_2_text: "Kari 和她的团队帮我们找到了正需要的产品。轮辋非常坚固，交付也很及时。",
+          testimonial_3_text: "专业的支持，优质的轮辋，以及快速回应。我们一定会继续与 CHENHUA AUTO 合作。",
+          testimonial_4_text: "每一笔订单都精心配送。他们的客服团队总是在线，这让我们非常安心。",
           faq: "常见问题",
           return_policy_q: "你们的退货政策是什么？",
-          return_policy_a: "您可以在交货后30天内退货。请确保商品未使用且包装完好。",
+          return_policy_a: "您可以在交付后 30 天内退货。请确保商品未使用且包装完好。",
           shipping_q: "运输需要多长时间？",
-          shipping_a: "国内运输需3-5个工作日，国际订单可能需要10-15个工作日。",
+          shipping_a: "国内运输需 3–5 个工作日，国际订单可能需要 10–15 个工作日。",
           customization_q: "你们提供定制服务吗？",
-          customization_a: "是的，我们为大宗订单提供定制服务。请联系我们的团队说明您的具体需求。",
-          tracking_q: "如何追踪我的订单？",
-          tracking_a: "订单发货后，我们会通过邮件或短信发送追踪编号给您。",
+          customization_a: "是的，我们为批量订单提供定制服务。请联系我们的团队并告知具体要求。",
+          tracking_q: "我如何追踪订单？",
+          tracking_a: "订单发出后，我们将通过电子邮件或短信发送追踪号码。",
           quick_links: "快速链接",
           about_us: "关于我们",
           contact: "联系我们",
           follow_us: "关注我们",
           privacy_policy: "隐私政策",
           terms_of_service: "服务条款",
-          contact_us: "联系CHENHUA AUTO",
-          full_name: "姓名",
+          contact_us: "联系 CHENHUA AUTO",
+          full_name: "全名",
           company_name: "公司名称",
           phone_number: "电话号码",
           whatsapp: "WhatsApp",
           wechat: "微信",
           toggle_theme: "切换主题"
         }
+
 
       };
 
