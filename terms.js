@@ -76,13 +76,30 @@ if (mobileModeToggle) mobileModeToggle.addEventListener('click', toggleDarkMode)
 
 
 
-  // Get today's date
-  const today = new Date();
+// Get today's date
+const today = new Date();
 
-  // Format: Month Day, Year (e.g., June 4, 2025)
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = today.toLocaleDateString('en-US', options);
+// Format: Month Day, Year (e.g., June 4, 2025)
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = today.toLocaleDateString('en-US', options);
 
-  // Insert the formatted date into the span
-  document.getElementById('last-updated-date').textContent = formattedDate;
+// Insert the formatted date into the span
+document.getElementById('last-updated-date').textContent = formattedDate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
