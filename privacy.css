@@ -157,6 +157,31 @@ body.dark-mode .contact-info {
   color: #eee;
 }
 
+body.dark-mode .privacy-intro{
+   background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode h2{
+  color: #eee;
+}
+
+body.dark-mode p{
+  color: #d3d1d1;
+}
+
+body.dark-mode .privacy-section{
+   background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode li{
+   color: #b6b6b6;
+}
+body.dark-mode strong{
+   color: #eee;
+}
+
 /* Add any other dark mode color tweaks as needed */
 
 

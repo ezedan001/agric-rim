@@ -161,26 +161,26 @@ body.dark-mode .c2 {
 
 
 body.dark-mode .brand-certifications {
-   background-color: #1e1e1e;
+  background-color: #1e1e1e;
   color: white;
 }
 
 
 
 
-body.dark-mode .cta-banner{
-   background-color: #1e1e1e;
+body.dark-mode .cta-banner {
+  background-color: #1e1e1e;
   border-bottom-color: #333;
   color: #eee;
 }
 
-body.dark-mode .span{
+body.dark-mode .span {
   color: #eee;
 }
 
 
-body.dark-mode .cons{
-   background-color: #1e1e1e;
+body.dark-mode .cons {
+  background-color: #1e1e1e;
   color: #eee;
 }
 
@@ -197,9 +197,10 @@ body.dark-mode .footer {
 
 body.dark-mode .foote {
   background-color: #1e1e1e;
-   border-bottom-color: #333;
+  border-bottom-color: #333;
   color: #eee;
 }
+
 /* Add any other dark mode color tweaks as needed */
 
 
@@ -1238,7 +1239,7 @@ body.dark-mode .foote {
 
   .brand-certifications h2 {
     font-size: 22px;
-  }  
+  }
 }
 
 

@@ -166,7 +166,7 @@ ${msg}
 
 Our CHENHUA AUTO team will reply as soon as possible.`;
 
-  const phone = "2348135584643"; // Replace with your WhatsApp number
+  const phone = "8618054365167"; // Replace with your WhatsApp number
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(finalMessage)}`;
   window.open(url, '_blank');
 }
@@ -195,7 +195,7 @@ Looking forward to your reply.
 CHENHUA AUTO`;
 
   const subject = `Inquiry: ${name}`;
-  const email = "ezesomtochukwu588@gmail.com"; // Replace with your real email
+  const email = "18054365167@163.com"; // Replace with your real email
 
   const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
   window.open(gmailURL, '_blank');
@@ -254,7 +254,7 @@ const translations = {
     disc: "Disc",
     split: "Split",
     solid: "Solid",
-    action_1: "Want to do business with <span class='span'>CHENHUA AUTO</span>?",
+    action_1: "Want to do business with CHENHUA AUTO ?",
     action_2: "We’re ready to provide you with the best rims and support for your needs. Let’s grow together.",
     contact_sales: "Contact Our Sales Team",
 
@@ -276,6 +276,7 @@ const translations = {
     phone_number: "Phone Number",
     whatsapp: "WhatsApp",
     wechat: "WeChat",
+    contact_email: "Email",
     toggle_theme: "Toggle Theme"
   },
   fr: {
@@ -295,7 +296,7 @@ const translations = {
     split: "Partagé",
     solid: "Solide",
 
-    action_1: "Vous voulez faire des affaires avec <span class='span'>CHENHUA AUTO</span>?",
+    action_1: "Vous voulez faire des affaires avec CHENHUA AUTO ?",
     action_2: "Nous sommes prêts à vous fournir les meilleures jantes et le soutien dont vous avez besoin. Grandissons ensemble.",
     contact_sales: "Contactez notre équipe commerciale",
 
@@ -317,6 +318,7 @@ const translations = {
     phone_number: "Numéro de téléphone",
     whatsapp: "WhatsApp",
     wechat: "WeChat",
+    contact_email: "E-mail",
     toggle_theme: "Changer de thème"
   },
 
@@ -337,7 +339,7 @@ const translations = {
     split: "مقسمة",
     solid: "صلبة",
 
-    action_1: "هل ترغب في التعاون مع <span class='span'>CHENHUA AUTO</span>؟",
+    action_1: "هل ترغب في التعاون مع CHENHUA AUTO ؟",
     action_2: "نحن جاهزون لتقديم أفضل الجنوط والدعم لاحتياجاتك. لننمو معًا.",
     contact_sales: "تواصل مع فريق المبيعات لدينا",
 
@@ -359,11 +361,11 @@ const translations = {
     phone_number: "رقم الهاتف",
     whatsapp: "واتساب",
     wechat: "وي شات",
+    contact_email: "البريد الإلكتروني",
     toggle_theme: "تبديل الوضع"
   },
 
   zh: {
-
     home: "首页",
     products: "产品",
     about: "关于我们",
@@ -380,7 +382,7 @@ const translations = {
     split: "分体式",
     solid: "实心",
 
-    action_1: "想与 <span class='span'>CHENHUA AUTO</span> 开展合作？",
+    action_1: "想与 CHENHUA AUTO  开展合作？",
     action_2: "我们随时为您提供优质轮辋和支持服务。让我们一起成长。",
     contact_sales: "联系销售团队",
 
@@ -402,6 +404,7 @@ const translations = {
     phone_number: "电话号码",
     whatsapp: "WhatsApp",
     wechat: "微信",
+    contact_email: "电子邮件",
     toggle_theme: "切换主题"
   }
 

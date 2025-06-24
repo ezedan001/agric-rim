@@ -60,16 +60,11 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="privacy.css">
-  <!-- FontAwesome CDN (add in <head>) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
 
 </head>
 
@@ -87,20 +82,21 @@
     <!-- Main Navigation (Desktop) -->
     <nav class="main-nav" aria-label="Primary Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="products.html" data-i18n="products">Products</a></li>
+        <li><a href="about.html" data-i18n="about">About</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
       </ul>
     </nav>
 
     <!-- Right Side Controls Desktop -->
     <div class="header-controls">
       <!-- Language Selector -->
-      <select aria-label="Select Language" class="language-select">
+      <select onchange="changeLanguage(this.value)" aria-label="Select Language" class="language-select">
         <option value="en">EN</option>
         <option value="fr">FR</option>
         <option value="ar">AR</option>
+        <option value="zh">中文</option>
       </select>
 
       <!-- Search Bar Desktop -->
@@ -113,7 +109,7 @@
       <button class="cart-btn" aria-label="View Cart">🛒</button>
 
       <!-- Dark/Light Mode Toggle Desktop -->
-      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle Dark/Light Mode">🌓</button>
 
       <!-- Hamburger for Mobile -->
       <button class="hamburger-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -127,16 +123,17 @@
     <button id="closeMobileMenu" aria-label="Close Menu" class="close-btn">&times;</button>
 
     <ul class="mobile-nav-list">
-      <li><a href="index.html" role="menuitem">Home</a></li>
-      <li><a href="products.html" role="menuitem">Products</a></li>
-      <li><a href="about.html" role="menuitem">About</a></li>
-      <li><a href="contact.html" role="menuitem">Contact</a></li>
+      <li><a href="index.html" data-i18n="home" role="menuitem">Home</a></li>
+      <li><a href="products.html" data-i18n="products" role="menuitem">Products</a></li>
+      <li><a href="about.html" data-i18n="about" role="menuitem">About</a></li>
+      <li><a href="contact.html" data-i18n="contact" role="menuitem">Contact</a></li>
     </ul>
 
-    <select aria-label="Select Language" class="mobile-language-select">
+    <select onchange="changeLanguage(this.value)" aria-label="Select Language" class="mobile-language-select">
       <option value="en">English</option>
       <option value="fr">French</option>
       <option value="ar">Arabic</option>
+      <option value="zh">Chinese</option>
     </select>
 
     <div class="mobile-search-container" role="search">
@@ -148,11 +145,11 @@
 
 
     <!-- Inside mobile menu -->
-    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌙 Toggle
+    <button id="mobileModeToggle" class="mobile-theme-toggle" aria-label="Toggle Dark/Light Mode">🌓 Toggle
       Theme</button>
 
 
-    <script src="products.js"></script>
+    <script src="privacy.js"></script>
   </nav>
 
 
@@ -170,8 +167,9 @@
 
   <section class="privacy-intro">
     <div class="containe">
-      <h2>Privacy Policy</h2>
-      <p>This Privacy Policy outlines how <strong>CHENHUA AUTO</strong> collects, uses, and protects your information.
+      <h2 data-i18n="privac_title">Privacy Policy</h2>
+      <p data-i18n="privacy_text">This Privacy Policy outlines how CHENHUA AUTO</strong> collects, uses,
+        and protects your information.
       </p>
     </div>
   </section>
@@ -186,14 +184,17 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Information We Collect</h3>
-      <p>CHENHUA AUTO may collect the following types of information:</p>
+      <h3 data-i18n="info_title">Information We Collect</h3>
+      <p data-i18n="info_intro">CHENHUA AUTO may collect the following types of information:</p>
 
       <ul>
-        <li><strong>Personal Data:</strong> Name, email address, phone number, and other contact details.</li>
-        <li><strong>Technical Data:</strong> IP address, browser type, operating system, device information, and access
+        <li data-i18n="info_personal"><strong>Personal Data:</strong> Name, email address, phone number, and other
+          contact details.</li>
+        <li data-i18n="info_technical"><strong>Technical Data:</strong> IP address, browser type, operating system,
+          device information, and access
           times.</li>
-        <li><strong>Behavioral Data:</strong> Pages visited, links clicked, time spent on site, and user preferences.
+        <li data-i18n="info_behavioral"><strong>Behavioral Data:</strong> Pages visited, links clicked, time spent on
+          site, and user preferences.
         </li>
       </ul>
     </div>
@@ -208,17 +209,21 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>How We Use Your Information</h3>
-      <p>CHENHUA AUTO uses the collected information for the following purposes:</p>
+      <h3 data-i18n="usage_title">How We Use Your Information</h3>
+      <p data-i18n="usage_intro">CHENHUA AUTO uses the collected information for the following purposes:</p>
 
       <ul>
-        <li><strong>To process inquiries:</strong> We use your personal information to respond to your messages, product
+        <li data-i18n="usage_inquiries"><strong>To process inquiries:</strong> We use your personal information to
+          respond to your messages, product
           requests, or customer support needs.</li>
-        <li><strong>To improve user experience:</strong> Technical and behavioral data help us optimize our website and
+        <li data-i18n="usage_experience"><strong>To improve user experience:</strong> Technical and behavioral data help
+          us optimize our website and
           tailor our services to user preferences.</li>
-        <li><strong>For marketing (if applicable):</strong> With your consent, we may send you updates, offers, or
+        <li data-i18n="usage_marketing"><strong>For marketing (if applicable):</strong> With your consent, we may send
+          you updates, offers, or
           promotional content.</li>
-        <li><strong>To comply with legal obligations:</strong> We may use your information to fulfill regulatory, tax,
+        <li data-i18n="usage_legal"><strong>To comply with legal obligations:</strong> We may use your information to
+          fulfill regulatory, tax,
           or legal requirements.</li>
       </ul>
     </div>
@@ -235,19 +240,22 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Sharing Your Information</h3>
-      <p>CHENHUA AUTO values your privacy and transparency. We want you to understand how your information is shared:
+      <h3 data-i18n="sharing_title">Sharing Your Information</h3>
+      <p data-i18n="sharing_intro">CHENHUA AUTO values your privacy and transparency. We want you to understand how your
+        information is shared:
       </p>
 
       <ul>
-        <li><strong>No Selling of Data:</strong> We do not sell, trade, or rent your personal data to third parties.
+        <li data-i18n="sharing_nosell"><strong>No Selling of Data:</strong> We do not sell, trade, or rent your personal
+          data to third parties.
         </li>
-        <li><strong>Third-Party Services:</strong> We may share data with trusted partners who help us operate the
+        <li data-i18n="sharing_services"><strong>Third-Party Services:</strong> We may share data with trusted partners
+          who help us operate the
           website and services, such as:</li>
         <ul>
-          <li>Google Analytics – to analyze website traffic and usage patterns</li>
-          <li>Payment processors – to securely handle transactions</li>
-          <li>Email service providers – to send communication you opted into</li>
+          <li data-i18n="sharing_google">Google Analytics – to analyze website traffic and usage patterns</li>
+          <li data-i18n="sharing_payment">Payment processors – to securely handle transactions</li>
+          <li data-i18n="sharing_email">Email service providers – to send communication you opted into</li>
         </ul>
       </ul>
     </div>
@@ -261,25 +269,7 @@
 
 
 
-  <section class="privacy-section">
-    <div class="containe">
-      <h3>Sharing Your Information</h3>
-      <p>CHENHUA AUTO values your privacy and transparency. We want you to understand how your information is shared:
-      </p>
 
-      <ul>
-        <li><strong>No Selling of Data:</strong> We do not sell, trade, or rent your personal data to third parties.
-        </li>
-        <li><strong>Third-Party Services:</strong> We may share data with trusted partners who help us operate the
-          website and services, such as:</li>
-        <ul>
-          <li>Google Analytics – to analyze website traffic and usage patterns</li>
-          <li>Payment processors – to securely handle transactions</li>
-          <li>Email service providers – to send communication you opted into</li>
-        </ul>
-      </ul>
-    </div>
-  </section>
 
 
 
@@ -291,18 +281,23 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Data Security</h3>
-      <p>CHENHUA AUTO is committed to protecting your information and has implemented strong security measures to
+      <h3 data-i18n="security_title">Data Security</h3>
+      <p data-i18n="security_intro">CHENHUA AUTO is committed to protecting your information and has implemented strong
+        security measures to
         safeguard it:</p>
 
       <ul>
-        <li><strong>SSL Encryption:</strong> All data transmitted between your browser and our servers is encrypted
+        <li data-i18n="security_ssl"><strong>SSL Encryption:</strong> All data transmitted between your browser and
+          our servers is encrypted
           using industry-standard SSL (Secure Socket Layer) technology.</li>
-        <li><strong>Firewalls and Access Control:</strong> We use advanced firewalls and restricted access protocols to
+        <li data-i18n="security_firewall"><strong>Firewalls and Access Control:</strong> We use advanced firewalls and
+          restricted access protocols to
           keep your data secure.</li>
-        <li><strong>Secure Storage:</strong> Your personal data is stored in secure environments and only accessible to
+        <li data-i18n="security_storage"><strong>Secure Storage:</strong> Your personal data is stored in secure
+          environments and only accessible to
           authorized personnel.</li>
-        <li><strong>Breach Prevention:</strong> Regular security audits, software updates, and monitoring are conducted
+        <li data-i18n="security_breach"><strong>Breach Prevention:</strong> Regular security audits, software updates,
+          and monitoring are conducted
           to prevent unauthorized access or data breaches.</li>
       </ul>
     </div>
@@ -317,19 +312,25 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Your Rights</h3>
-      <p>As a user of CHENHUA AUTO’s services, you have the following rights regarding your personal data:</p>
+      <h3 data-i18n="rights_title">Your Rights</h3>
+      <p data-i18n="rights_intro">As a user of CHENHUA AUTO’s services, you have the following rights regarding your
+        personal data:</p>
 
       <ul>
-        <li><strong>Right to Access:</strong> You can request a copy of the personal information we hold about you at
+        <li data-i18n="rights_access"><strong>Right to Access:</strong> You can request a copy of the personal
+          information
+          we hold about you at
           any time.</li>
-        <li><strong>Right to Correction:</strong> If you believe any information we have is inaccurate or incomplete,
+        <li data-i18n="rights_correct"><strong>Right to Correction:</strong> If you believe any information we have is
+          inaccurate or incomplete,
           you have the right to request a correction.</li>
-        <li><strong>Right to Deletion:</strong> You may request that we delete your personal data from our systems,
+        <li data-i18n="rights_delete"><strong>Right to Deletion:</strong> You may request that we delete your personal
+          data from our systems,
           subject to legal and operational obligations.</li>
       </ul>
 
-      <p>To make a data request, please contact us at <a href="mailto:sales@chenhuaauto.com">sales@chenhuaauto.com</a>.
+      <p data-i18n="rights_contact">To make a data request, please contact us at <a href="mailto:18054365167@163.com"
+          data-i18n="rights_contact_email">sales@chenhuaauto.com</a>.
       </p>
     </div>
   </section>
@@ -346,14 +347,18 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Cookies</h3>
-      <p>Our website may use cookies to enhance your browsing experience and analyze site traffic. Cookies are small
+      <h3 data-i18n="cookies_title">Cookies</h3>
+      <p data-i18n="cookies_intro1">Our website may use cookies to enhance your browsing experience and analyze site
+        traffic. Cookies are small
         data files stored on your device that help us understand how you use our site.</p>
 
-      <p>You have the option to disable cookies through your browser settings. However, please note that some features
+      <p data-i18n="cookies_intro2">You have the option to disable cookies through your browser settings. However,
+        please
+        note that some features
         of the website may not function properly without cookies enabled.</p>
 
-      <p>By continuing to use our site, you consent to our use of cookies in accordance with this Privacy Policy.</p>
+      <p data-i18n="cookies_intro3">By continuing to use our site, you consent to our use of cookies in accordance with
+        this Privacy Policy.</p>
     </div>
   </section>
 
@@ -370,8 +375,9 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Policy Updates</h3>
-      <p>We may update this Privacy Policy occasionally to reflect changes in our practices or legal requirements. Any
+      <h3 data-i18n="updates_title">Policy Updates</h3>
+      <p data-i18n="updates_intro">We may update this Privacy Policy occasionally to reflect changes in our practices or
+        legal requirements. Any
         changes will be posted on this page, and the revised policy will apply from the date of publication.</p>
     </div>
   </section>
@@ -386,12 +392,13 @@
 
   <section class="privacy-section">
     <div class="containe">
-      <h3>Contact Information</h3>
-      <p>If you have any questions or concerns about this Privacy Policy, feel free to contact us:</p>
+      <h3 data-i18n="contact_title">Contact Information</h3>
+      <p data-i18n="contact_intro">If you have any questions or concerns about this Privacy Policy, feel free to contact
+        us:</p>
       <ul>
-        <li id="dynamic-email">📧 Email: Generating link...</li>
-        <li>📞 Phone: +234-XXXXXXXXXX (optional)</li>
-        <li>🔗 <a href="contact.html">Visit our Contact Page</a></li>
+        <li id="dynamic-email" data-i18n="contact_email">📧 Email: Generating link...</li>
+        <li data-i18n="contact_phone">📞 Phone: +86 18054365167</li>
+        <li>🔗 <a href="contact.html" data-i18n="page">Visit our Contact Page</a></li>
       </ul>
     </div>
   </section>
@@ -455,7 +462,7 @@ Best regards,
 [Your Name]`;
 
       const subject = "Privacy Inquiry";
-      const email = "support@chenhuaauto.com";
+      const email = "18054365167@163.com";
       const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       // Inject into page
@@ -529,3 +536,27 @@ Best regards,
           Service</a></p>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -186,6 +186,10 @@ const translations = {
     testimonial_3_text: "Professional support, quality rims, and fast responses. Will surely continue working with CHENHUA AUTO.",
     testimonial_4_text: "Every order is delivered with care and precision. Their support team is always available, and that builds trust.",
 
+    action_1: "Want to do business with CHENHUA AUTO ?",
+    action_2: "We’re ready to provide you with the best rims and support for your needs. Let’s grow together.",
+    contact_sales: "Contact Our Sales Team",
+
     quick_links: "Quick Links",
     about_us: "About Us",
     contact: "Contact",
@@ -256,6 +260,10 @@ const translations = {
     testimonial_2_text: "Kari et l'équipe nous ont aidés à obtenir exactement ce dont nous avions besoin. Les jantes sont solides et la livraison était parfaite.",
     testimonial_3_text: "Soutien professionnel, jantes de qualité et réponses rapides. Nous continuerons sûrement à travailler avec CHENHUA AUTO.",
     testimonial_4_text: "Chaque commande est livrée avec soin et précision. Leur équipe de support est toujours disponible, ce qui inspire confiance.",
+
+    action_1: "Vous voulez faire des affaires avec CHENHUA AUTO ?",
+    action_2: "Nous sommes prêts à vous fournir les meilleures jantes et le soutien dont vous avez besoin. Grandissons ensemble.",
+    contact_sales: "Contactez notre équipe commerciale",
 
     // Footer and contact
     quick_links: "Liens rapides",
@@ -329,6 +337,10 @@ const translations = {
     testimonial_3_text: "دعم احترافي، جنوط ذات جودة عالية، واستجابات سريعة. بالتأكيد سنواصل العمل مع CHENHUA AUTO.",
     testimonial_4_text: "كل طلب يتم توصيله بعناية ودقة. فريق الدعم دائمًا متاح، وهذا يعزز الثقة.",
 
+    action_1: "هل ترغب في التعاون مع CHENHUA AUTO ؟",
+    action_2: "نحن جاهزون لتقديم أفضل الجنوط والدعم لاحتياجاتك. لننمو معًا.",
+    contact_sales: "تواصل مع فريق المبيعات لدينا",
+
     // Footer and contact
     quick_links: "روابط سريعة",
     about_us: "من نحن",
@@ -400,6 +412,10 @@ const translations = {
     testimonial_2_text: "Kari 和她的团队帮我们找到了合适的产品。轮辋质量很好，发货也非常准时。",
     testimonial_3_text: "专业的支持，优质的轮辋，以及快速的响应，让我们决定继续与 CHENHUA AUTO 合作。",
     testimonial_4_text: "每一次订单都细致处理，支持团队随时响应，令人信赖。",
+
+    action_1: "想与 CHENHUA AUTO  开展合作？",
+    action_2: "我们随时为您提供优质轮辋和支持服务。让我们一起成长。",
+    contact_sales: "联系销售团队",
 
     // Footer and contact
     quick_links: "快速链接",

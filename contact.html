@@ -267,10 +267,10 @@
 
         <!-- Social Icons -->
         <div class="social-icons">
-          <a href="#" data-i18n="social_facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" data-i18n="social_whatsapp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" data-i18n="social_linkedin"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" data-i18n="social_youtube"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -292,58 +292,73 @@
 
 
 
+  <!-- Gmail & Form Script -->
   <script>
-    const templates = [
-      "I’m interested in your Agricultural Rims. Please send full catalog and pricing.",
-      "Kindly provide specifications and shipping details for your Tractor Rims.",
-      "Please share your best offer for bulk purchase of Agricultural Rims.",
-      "We are ready to order. Send us proforma invoice for available stock.",
-      "I want to confirm the compatibility and size details of your Rims.",
-      "Please send your product catalog and delivery timeline for large orders."
+    // 🔁 Product suggestions
+    const productSuggestions = [
+      "Heavy-Duty Tractor Rim",
+      "High-Speed Harvester Wheel",
+      "Durable Agricultural Implement Rim",
+      "Multi-Fit Trailer Rim"
     ];
 
-    function getTimeGreeting() {
-      const h = new Date().getHours();
-      if (h < 12) return "Good morning";
-      else if (h < 18) return "Good afternoon";
-      else return "Good evening";
-    }
-
-    async function detectCountry() {
+    // 🌍 Detect country by IP
+    async function getUserCountry() {
       try {
-        const res = await fetch("https://ipapi.co/json/");
-        const data = await res.json();
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
         return data.country_name || "your country";
-      } catch {
+      } catch (e) {
         return "your country";
       }
     }
 
-    async function sendSmartEmail() {
-      const name = prompt("🔹 Enter Your Full Name:");
-      if (!name) return alert("Full name is required.");
-
-      const company = prompt("🔹 Enter Your Company Name:");
-      if (!company) return alert("Company name is required.");
-
-      const email = prompt("🔹 Enter Your Email Address:");
-      if (!email) return alert("Email is required.");
-
-      const subject = prompt("🔹 Subject of your message:");
-      if (!subject) return alert("Subject is required.");
-
-      const phone = prompt("🔹 Your Phone Number (optional):");
-
-      const greeting = getTimeGreeting();
-      const country = await detectCountry();
-      const template = templates[Math.floor(Math.random() * templates.length)];
-
-      const message = `${greeting},\n\nMy name is ${name} from ${company}, based in ${country}.\n\n${template}\n\n📞 Phone: ${phone || "Not provided"}\n📧 Email: ${email}\n\nLooking forward to your response.\n\nBest regards,\n${name}`;
-
-      const mailtoLink = `mailto:18054365167@163.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
-      window.open(mailtoLink, "_blank");
+    // 🕒 Time-based greeting for 2025
+    function getGreeting2025() {
+      const hour = new Date().getHours();
+      if (hour < 11) return "Good morning";
+      if (hour < 17) return "Good afternoon";
+      if (hour < 21) return "Good evening";
+      return "Hello";
     }
+
+    // 📬 4 Predefined message templates
+    const templates = [
+      (name, country, product) =>
+        `Hello CHENHUA AUTO,\n\nMy name is ${name} from ${country}.\nI’m interested in your ${product}.\nPlease send me more details and your latest price.\n\nBest regards,\n${name}`,
+
+      (name, country) =>
+        `Dear CHENHUA AUTO,\n\nI represent a farm equipment company in ${country}.\nWe would like to distribute your rims locally.\nPlease send partnership details.\n\nSincerely,\n${name}`,
+
+      (name) =>
+        `Hi CHENHUA AUTO,\n\nThis is ${name}. I’d like to inquire about rim compatibility with my machinery.\nCan I send you some specs for review?\n\nThanks!`,
+
+      (name, product) =>
+        `Greetings CHENHUA AUTO,\n\nI need a quote for bulk quantity of ${product}.\nKindly include shipping to my country.\n\nRegards,\n${name}`
+    ];
+
+    // ✉️ Gmail Compose Launcher
+    async function openGmailCompose() {
+      const name = prompt("Please enter your full name:");
+      if (!name) return;
+
+      const country = await getUserCountry();
+      const greeting = getGreeting2025();
+      const product = productSuggestions[Math.floor(Math.random() * productSuggestions.length)];
+
+      // Randomly pick one of the 4 templates
+      const messageIndex = Math.floor(Math.random() * templates.length);
+      const messageBody = templates[messageIndex](name, country, product);
+      const subject = `${greeting}, ${name}`;
+
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=18054365167@163.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
+      window.open(gmailLink, "_blank");
+    }
+
+    // ✅ Optional: Intercept form for confirmation (non-Gmail)
+    document.querySelector("form").addEventListener("submit", function (e) {
+      alert("📨 Thank you! Your message will be sent via email.");
+    });
   </script>
 
 
