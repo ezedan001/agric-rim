@@ -157,6 +157,103 @@ body.dark-mode .contact-info {
     color: #eee;
 }
 
+body.dark-mode .terms-title-section {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode h1 {
+    color: #eee;
+}
+
+body.dark-mode .subtitle {
+    color: #c5c5c5;
+}
+
+body.dark-mode .tos-introduction {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode h2 {
+    color: #eee;
+}
+
+body.dark-mode p {
+    color: #c5c5c5;
+}
+
+
+
+body.dark-mode .tos-user-responsibilities {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .tos-orders-communication {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .tos-intellectual-property {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .tos-limitation-liability{
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .tos-changes {
+     background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .contact-info{
+     background-color: #1e1e1e;
+     border-bottom: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode h2 {
+    color: #eee;
+}
+
+body.dark-mode p {
+    color: #c5c5c5;
+}
+body.dark-mode li {
+    color: #c5c5c5;
+}
+
+
+body.dark-mode .cta-banner{
+   background-color: #1e1e1e;
+  border-bottom-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .con{
+  color: orange;
+}
+
+
+body.dark-mode .cons{
+   background-color: #1e1e1e;
+  color: #eee;
+}
+
+
+body.dark-mode strong {
+    color: #eee;
+}
+
+
+
+
+
+
 /* Add any other dark mode color tweaks as needed */
 
 
@@ -818,38 +915,103 @@ body.dark-mode .contact-info {
 
 
 
-
-.cta-footer-bar {
-  background-color: #ff6600; /* Orange brand color */
-  color: #fff;
-  padding: 20px;
+/* CTA Banner Section */
+.cta-banner {
+  /* background: linear-gradient(to right, #0a0a0a, #1a1a1a); */
+  padding: 80px 20px;
   text-align: center;
-  border-top: 5px solid #000;
-}
-
-.cta-footer-bar .cta-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.cta-footer-bar p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.cta-footer-bar .cta-button {
-  background-color: #000;
   color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-top: 4px solid orange;
+  /* border-bottom: 4px solid orange; */
 }
 
-.cta-footer-bar .cta-button:hover {
-  background-color: #333;
+.cta-banner .cta-content {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.cta-banner h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cta-banner h2 span {
+  color: black;
+  font-weight: bold;
+}
+
+.cta-banner p {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #e09406;
+  color: #000;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 18px rgba(255, 165, 0, 0.4);
+}
+
+.cta-button:hover {
+  background-color: #fda725;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #dfb15d;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .cta-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-banner p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 60px 15px;
+  }
+
+  .cta-banner h2 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner {
+    padding: 50px 10px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-banner p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
 }
 
 
