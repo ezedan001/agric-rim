@@ -423,55 +423,7 @@ document.addEventListener("DOMContentLoaded", populateContactInfoSection);
 
 
 
-    <script>
-      // Time-based greeting
-      function getGreeting() {
-        const hour = new Date().getHours();
-        if (hour < 12) return "Good morning 🌅";
-        if (hour < 18) return "Good afternoon ☀️";
-        return "Good evening 🌙";
-      }
-
-      // Random suggestions
-      const suggestions = [
-        "How can we assist you today?",
-        "Feel free to ask about pricing or availability.",
-        "Need help with product specs?",
-        "Let us know your delivery location or rim size."
-      ];
-
-      // Set greeting and suggestion
-      document.getElementById("greeting").textContent = getGreeting();
-      document.getElementById("suggestion").textContent =
-        suggestions[Math.floor(Math.random() * suggestions.length)];
-
-      // Fetch visitor's country
-      fetch("https://ipapi.co/json/")
-        .then((res) => res.json())
-        .then((data) => {
-          document.getElementById("country").textContent =
-            `🌍 Detected Location: ${data.country_name}`;
-        })
-        .catch(() => {
-          document.getElementById("country").textContent = "🌍 Location: Unknown";
-        });
-
-      // Prefilled WhatsApp and Gmail
-      const whatsappMessage = encodeURIComponent(
-        `Hello CHENHUA AUTO Team, Before we continue, please help us with the following details: Full Name: Company Name: Phone Number: Our team will reply as soon as possible.`
-      );
-      const emailSubject = encodeURIComponent("Inquiry from CHENHUA AUTO Website");
-      const emailBody = encodeURIComponent(
-        `Hello Team, Before we continue, please help us with the following details: Full Name: Company Name: Phone Number: Thanks!`
-      );
-
-      // Update contact links
-      document.getElementById("whatsappLink").href = `https://wa.me/8618054365167?text=${whatsappMessage}`;
-   document.getElementById("emailLink").href = 
-  `https://mail.google.com/mail/?view=cm&fs=1&to=18054365167@163.com&su=${emailSubject}&body=${emailBody}`;
-
-   </script>
-
+   
 
 
 
